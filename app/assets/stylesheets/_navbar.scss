@@ -1,0 +1,61 @@
+$navbar-height-md: $line-height-computed * 2;
+$navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */ 
+
+.navbar { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+  
+  @media (min-width: $grid-float-breakpoint) {
+    min-height: $navbar-height-md;
+    padding-top: $navbar-padding-vertical-md;
+    padding-bottom: $navbar-padding-vertical-md;
+    .navbar-nav {
+      @include pull-right;
+    }
+  }
+} 
+
+.navbar-nav {
+  > li > a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $font-size-base - 2;
+    @include transition(all 0.3s ease-in-out);
+  }
+  @media (min-width: $grid-float-breakpoint) {
+    margin-top: ($navbar-padding-vertical-md / 2);
+    margin-bottom: ($navbar-padding-vertical-md / 2);
+  }
+   
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#locales-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  .nav > li > a { 
+    background-color: $brand-primary;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: $font-size-base - 5;
+    padding: 4px 8px;
+    @include transition(all 0.3s ease-in-out);
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-primary, 10%); 
+      color: white;
+    }
+  }
+}
+

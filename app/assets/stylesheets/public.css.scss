@@ -1,0 +1,309 @@
+/*
+Theme Name:         Cabourg
+Description:        Cabourg is html 5 theme to display your work and blog.
+Version:            1.0.0
+Author:             Regis Bruggheman
+Author URI:         http://oscar.com
+
+*/ 
+
+/* THEME VARIABLES
+-------------------------------------------------- */
+$accent-color: #95c11f;
+$theme-color: #d61941; 
+$max-image-width: 1200px;
+$th-footer-height: 100px;
+
+/* THEME MIXINS
+-------------------------------------------------- */
+@mixin center-nav {
+	@include clearfix();
+	text-align:center;
+	margin: 0;
+	width: 100%;
+	> li {
+		text-align:center;
+		float:none;
+		display:inline-block;
+	}
+}
+
+/* IMPORTS
+-------------------------------------------------- */
+@import "variables"; 
+@import "bootstrap-3.0.0/bootstrap";
+@import 'font-awesome-3.2.1/font-awesome';
+@import "effects";
+@import "navbar";
+@import "footer";
+@import "contact";
+@import "home";
+
+/* FIX FOR IE DEVICE_WIDTH BUG
+-------------------------------------------------- */
+@-webkit-viewport{width:device-width}
+@-moz-viewport{width:device-width}
+@-ms-viewport{width:device-width}
+@-o-viewport{width:device-width}
+@viewport{width:device-width}
+
+
+// Color for the placeholder plugin
+.placeholder {
+  color: $input-color-placeholder;
+}
+
+/* FIX FOR GMAP BUG
+-------------------------------------------------- */
+#map-canvas {
+  height: 400px;
+  img {
+    max-width: none;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+  }
+}
+
+/* GLOBAL STYLE
+-------------------------------------------------- */
+// We do not want focus
+// -------------------------
+a:focus,
+.btn:focus {
+  outline: 0;
+}
+::selection {
+	background-color: #000;
+	color: #fff;
+}
+
+// Buttons
+// -------------------------
+
+.btn {
+  @include transition(all 0.4s ease-in-out); 
+}
+.btn-big {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  
+}
+.btn-primary {
+  border: none;
+  &:hover { 
+    border: none;
+    background-color: lighten($brand-primary, 10%); 
+    color: white;
+  }
+}
+.copy-text {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: $font-family-serif;
+  h1,h2,h3,h4,h5,h6{
+    color: $brand-primary; 
+  }
+  h2, h3 {
+    font-size: 18px;
+  }
+}
+
+#back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  z-index: 99;
+  display: none;
+  margin: 0;
+  width: 50px;
+  height: 42px;
+  line-height: 42px;
+  background-color: #323A45;
+  @include transition(all 0.4s ease-in-out);
+} 
+/* REMOTE PAGE CONTAINER
+-------------------------------------------------- */
+#project-page {
+  display: none;
+}
+
+.main-content {
+  //padding-top: $line-height-computed * 4;
+  //padding-bottom: $line-height-computed * 4;
+}
+html, body, #page-wrapper {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+#page-wrapper {
+width: 100%;
+height: 100%;
+margin: 0px;
+padding: 0px;
+
+}
+
+#header{
+  overflow:hidden;
+  height:auto;
+  background: image-url('bg.jpg') fixed no-repeat; 
+  height:100%;
+  color: #fff;
+  h1 {
+    color:$accent-color;
+    font-family: $font-family-cursive;
+  }
+  p {
+    font-weight: 300;
+  }
+ }
+.no-touch #header{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#intro {
+  
+}
+#logo {
+  margin-bottom: 24px;
+}
+/* PAGE HEADER 
+-------------------------------------------------- */
+
+.section-padding {
+  padding-top: $line-height-computed * 3;
+  padding-bottom: $line-height-computed * 3;
+}
+.section {
+  position: relative;
+}
+.section-title {
+ font-family:$font-family-serif;
+ text-transform: uppercase; 
+}
+
+.section-caret {
+  width: 0;
+  height: 0;
+  border-top:   22px solid #E73339;
+  border-right: 22px solid transparent;
+  border-left:  22px solid transparent;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  margin-left: -11px;
+  // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
+  // we can just straight up remove this.
+  border-bottom: 0 dotted;
+  content: "";
+  
+  &.section-caret-top {
+    top: auto; 
+    bottom: -22px; 
+    border-top-color: #fff;
+
+    // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
+    // we can just straight up remove this.
+    border-bottom: 0 dotted; 
+  }
+}
+.section-slogan {
+  font-family: $font-family-cursive;
+}
+.services-section {
+  .section-caret {
+     border-top-color: #F9B233;
+  }
+}
+.services-section-title {
+  background-color: #F9B233;
+  color: #fff;
+}
+.car-section {
+  .car-section-title,
+  .car-section-description {
+    background-color: #E73339;
+    color: #fff;
+  }
+  .car-section-slogan {
+    h1, h2, h3, h4, h5, h6 {
+      
+      color: #E73339; 
+    }
+  } 
+  .car-section-images {
+    background-color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+      color: #E73339;
+    }
+  }
+  .car-section-rates {
+    background-color: #fff;
+    h1, h2, h3, h4, h5, h6 {
+      color: #E73339;
+    }
+
+  }
+  &:nth-child(even) {
+    .car-section-title,
+    .car-section-description {
+      background-color: #951B81; 
+      
+    }
+    .section-caret {
+      border-top-color: #951B81;
+    } 
+    .car-section-slogan {
+      h1, h2, h3, h4, h5, h6 {
+        color: #951B81; 
+      }
+    }
+    .car-section-images {
+      h1, h2, h3, h4, h5, h6 {
+        color: #951B81;
+      }
+    }
+    .car-section-rates {
+      h1, h2, h3, h4, h5, h6 {
+        color: #951B81;
+      }
+    }
+  }
+}
+
+#streets {
+  background-color: #0097e3;
+  .section-title-wrapper {
+     
+  }
+  .section-caret {
+     border-top-color: #0097e3;
+  }
+}
+table {
+  @extend .table;
+}
+
+/* PRINT UTILITIES
+-------------------------------------------------- */
+.navbar,
+#footer,
+#sidebar,
+form {
+  @extend .hidden-print;
+} 
+
+ 

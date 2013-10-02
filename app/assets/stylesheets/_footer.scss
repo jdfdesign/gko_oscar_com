@@ -1,0 +1,41 @@
+/* FOOTER
+-------------------------------------------------- */
+#footer {
+  
+  //background: #3E4549;
+  padding-top: $line-height-computed * 6;
+  padding-bottom: $line-height-computed * 4;
+}
+.social-links-nav {
+  @include center-nav();
+}
+/* COPYRIGHT
+-------------------------------------------------- */
+#copyright {
+  //background: #2B3033;
+  
+  .container {
+    border-top: 1px solid #474747;
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed; 
+  }
+   p {
+     color: #989898;
+     font-size: 11px;
+  }
+}
+.nav-menu-legal {
+  > li {
+    float: left;
+    margin-right: 15px;
+  }
+  > li > a {
+    color: #989898;
+    font-size: 11px;
+    padding: 0;
+    &:hover {
+      color: black;
+      background-color: transparent;
+    }
+  }
+}

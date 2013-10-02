@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js">
+<%= render 'head' %>
+<body id='<%= @body_id %>'> 
+  <div id="page-wrapper">
+    <section id="header" class="section intro-section-title section-padding">
+  	  <div class="container">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+            <div id="intro" class="text-container">
+              <%= image_tag("logo-inverse.png", :id => "logo") %>
+              <h1><%= resource.title.html_safe %></h1>
+              <div class="text"><%= resource.body.html_safe %></div>
+              <div id="explore"><a class="scroll" href="#cars"><i class="icon-angle-down icon-4x"></i></a></div>
+            </div>
+          </div>
+        </div>
+  	</section>
+    <%= render "navbar" %>
+    <section class="main-content">
+      <%= yield %>
+    </section>
+    <section id="contacts">
+      <%= render "contact_form" %>
+    </section>
+    
+    <!-- START COPYRIGHT -->
+    <section id="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 text-left">
+            <%= render_menu('legal') %>
+          </div>
+          <div class="col-xs-6 text-right">
+            <p>@ Copyright. All Rights Reserved. Created by <a href="http://www.oscar.com">Jouf Design.</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END COPYRIGHT -->
+  </div>
+
+  <!-- Back To Top -->
+  <a id="back-to-top" href="#" class="text-center">
+  	<i class="icon-angle-up icon-2x"></i>
+  </a>
+  <!-- End Back to Top --> 
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <%= render 'javascripts' %>
+
+</body>  
+</html>

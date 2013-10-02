@@ -1,0 +1,54 @@
+<%# cache ['home', site, I18n.locale] do %>
+
+  <%= render 'car', :car_name => 'fiat_500_cabriolet' %>
+  <%= render 'car', :car_name => 'hyundai_i10' %>
+	<% if srv = site.sections.named("services") %>
+	<!-- Begin Services --> 
+	<section class="section section-title-wrapper services-section-title section-padding">
+	  <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2 class="section-title"><%= srv.title.html_safe %></h2>
+          <p><%= srv.body.html_safe %></p>
+        </div>
+      </div>
+	</section>   
+	<section class="section services-section section-padding">
+	  <div class="section-caret"></div>
+	  <div class="container">
+  	  <div class="row">
+        <% srv.children.each do |srvc| %>
+          <div class="col-xs-6 col-sm-4">
+            <div class="thumbnail">
+              <div class="caption"> 
+                <h3><%= srvc.title.html_safe %></h3>
+                <p><%= srvc.body.html_safe %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div> 
+	</section>
+	<% end %>
+	<% if pg = site.sections.named("streets") %>
+	<!-- Begin Services --> 
+	<section id="streets" class="section section-title-wrapper section-padding">
+	  <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h2 class="section-title"><%= pg.title.html_safe %></h2>
+        </div>
+      </div>
+	</section>   
+	<section class="section section-padding">
+	  <div class="section-caret"></div>
+	  <div class="container">
+  	  <div class="row">
+  	    
+        <%= pg.body.html_safe %>
+      </div>
+    </div> 
+	</section>
+	<% end %>
+<%# end %>
