@@ -5,10 +5,11 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
 -------------------------------------------------- */ 
 
 .navbar { 
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: auto;
   left: 0;
   right: 0;
+  bottom: 0;
   margin-bottom: 0;
   border-top: 6px solid #E73339;
   @media (min-width: $grid-float-breakpoint) {
@@ -20,7 +21,13 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
     }
   }
 } 
-
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  background-color: #222;
+  border-top-color: $brand-primary;
+}
 .navbar-nav {
   > li > a {
     text-transform: uppercase;
@@ -32,7 +39,6 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
     margin-top: ($navbar-padding-vertical-md / 2);
     margin-bottom: ($navbar-padding-vertical-md / 2);
   }
-   
 }
 
 .navbar-brand {

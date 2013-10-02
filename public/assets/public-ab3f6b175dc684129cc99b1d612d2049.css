@@ -10256,10 +10256,11 @@ http://tympanus.net/Tutorials/CaptionHoverEffects/index.html
 -------------------------------------------------- */
 /* line 7, ../../app/assets/stylesheets/_navbar.scss */
 .navbar {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: auto;
   left: 0;
   right: 0;
+  bottom: 0;
   margin-bottom: 0;
   border-top: 6px solid #E73339;
 }
@@ -10270,13 +10271,22 @@ http://tympanus.net/Tutorials/CaptionHoverEffects/index.html
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  /* line 18, ../../app/assets/stylesheets/_navbar.scss */
+  /* line 19, ../../app/assets/stylesheets/_navbar.scss */
   .navbar .navbar-nav {
     float: right !important;
   }
 }
 
-/* line 25, ../../app/assets/stylesheets/_navbar.scss */
+/* line 24, ../../app/assets/stylesheets/_navbar.scss */
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  background-color: #222;
+  border-top-color: #95c11f;
+}
+
+/* line 32, ../../app/assets/stylesheets/_navbar.scss */
 .navbar-nav > li > a {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -10285,26 +10295,26 @@ http://tympanus.net/Tutorials/CaptionHoverEffects/index.html
   transition: all 0.3s ease-in-out;
 }
 @media (min-width: 768px) {
-  /* line 24, ../../app/assets/stylesheets/_navbar.scss */
+  /* line 31, ../../app/assets/stylesheets/_navbar.scss */
   .navbar-nav {
     margin-top: 5px;
     margin-bottom: 5px;
   }
 }
 
-/* line 38, ../../app/assets/stylesheets/_navbar.scss */
+/* line 44, ../../app/assets/stylesheets/_navbar.scss */
 .navbar-brand {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-/* line 42, ../../app/assets/stylesheets/_navbar.scss */
+/* line 48, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 46, ../../app/assets/stylesheets/_navbar.scss */
+/* line 52, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu .nav > li > a {
   background-color: #95c11f;
   color: #fff;
@@ -10315,7 +10325,7 @@ http://tympanus.net/Tutorials/CaptionHoverEffects/index.html
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 55, ../../app/assets/stylesheets/_navbar.scss */
+/* line 61, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: #b0de35;
   color: white;
@@ -10670,22 +10680,7 @@ a:focus,
   color: white;
 }
 
-/* line 103, ../../app/assets/stylesheets/public.css.scss */
-.copy-text {
-  font-size: 12px;
-  line-height: 18px;
-  font-family: "Vidaloka", "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
-}
-/* line 107, ../../app/assets/stylesheets/public.css.scss */
-.copy-text h1, .copy-text h2, .copy-text h3, .copy-text h4, .copy-text h5, .copy-text h6 {
-  color: #95c11f;
-}
-/* line 110, ../../app/assets/stylesheets/public.css.scss */
-.copy-text h2, .copy-text h3 {
-  font-size: 18px;
-}
-
-/* line 115, ../../app/assets/stylesheets/public.css.scss */
+/* line 105, ../../app/assets/stylesheets/public.css.scss */
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -10703,12 +10698,12 @@ a:focus,
 
 /* REMOTE PAGE CONTAINER
 -------------------------------------------------- */
-/* line 130, ../../app/assets/stylesheets/public.css.scss */
+/* line 120, ../../app/assets/stylesheets/public.css.scss */
 #project-page {
   display: none;
 }
 
-/* line 138, ../../app/assets/stylesheets/public.css.scss */
+/* line 128, ../../app/assets/stylesheets/public.css.scss */
 html, body, #page-wrapper {
   width: 100%;
   height: 100%;
@@ -10719,7 +10714,7 @@ html, body, #page-wrapper {
   box-sizing: border-box;
 }
 
-/* line 148, ../../app/assets/stylesheets/public.css.scss */
+/* line 138, ../../app/assets/stylesheets/public.css.scss */
 #page-wrapper {
   width: 100%;
   height: 100%;
@@ -10727,7 +10722,7 @@ html, body, #page-wrapper {
   padding: 0px;
 }
 
-/* line 156, ../../app/assets/stylesheets/public.css.scss */
+/* line 146, ../../app/assets/stylesheets/public.css.scss */
 #header {
   overflow: hidden;
   height: auto;
@@ -10735,17 +10730,17 @@ html, body, #page-wrapper {
   height: 100%;
   color: #fff;
 }
-/* line 162, ../../app/assets/stylesheets/public.css.scss */
+/* line 152, ../../app/assets/stylesheets/public.css.scss */
 #header h1 {
   color: #95c11f;
   font-family: "Rock Salt", cursive;
 }
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
+/* line 156, ../../app/assets/stylesheets/public.css.scss */
 #header p {
   font-weight: 300;
 }
 
-/* line 170, ../../app/assets/stylesheets/public.css.scss */
+/* line 160, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10754,36 +10749,36 @@ html, body, #page-wrapper {
   background-attachment: fixed;
 }
 
-/* line 177, ../../app/assets/stylesheets/public.css.scss */
+/* line 167, ../../app/assets/stylesheets/public.css.scss */
 #intro {
   max-width: 80%;
 }
 
-/* line 180, ../../app/assets/stylesheets/public.css.scss */
+/* line 170, ../../app/assets/stylesheets/public.css.scss */
 #logo {
   margin-bottom: 24px;
 }
 
 /* PAGE HEADER 
 -------------------------------------------------- */
-/* line 186, ../../app/assets/stylesheets/public.css.scss */
+/* line 176, ../../app/assets/stylesheets/public.css.scss */
 .section-padding {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-/* line 190, ../../app/assets/stylesheets/public.css.scss */
+/* line 180, ../../app/assets/stylesheets/public.css.scss */
 .section {
   position: relative;
 }
 
-/* line 193, ../../app/assets/stylesheets/public.css.scss */
+/* line 183, ../../app/assets/stylesheets/public.css.scss */
 .section-title {
   font-family: "Vidaloka", "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
 }
 
-/* line 198, ../../app/assets/stylesheets/public.css.scss */
+/* line 188, ../../app/assets/stylesheets/public.css.scss */
 .section-caret {
   width: 0;
   height: 0;
@@ -10798,7 +10793,7 @@ html, body, #page-wrapper {
   border-bottom: 0 dotted;
   content: "";
 }
-/* line 214, ../../app/assets/stylesheets/public.css.scss */
+/* line 204, ../../app/assets/stylesheets/public.css.scss */
 .section-caret.section-caret-top {
   top: auto;
   bottom: -22px;
@@ -10806,77 +10801,83 @@ html, body, #page-wrapper {
   border-bottom: 0 dotted;
 }
 
-/* line 224, ../../app/assets/stylesheets/public.css.scss */
+/* line 214, ../../app/assets/stylesheets/public.css.scss */
 .section-slogan {
   font-family: "Rock Salt", cursive;
 }
 
-/* line 228, ../../app/assets/stylesheets/public.css.scss */
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
 .services-section .section-caret {
-  border-top-color: #F9B233;
+  border-top-color: #f0652f;
 }
 
-/* line 232, ../../app/assets/stylesheets/public.css.scss */
+/* line 222, ../../app/assets/stylesheets/public.css.scss */
 .services-section-title {
-  background-color: #F9B233;
+  background-color: #f0652f;
   color: #fff;
 }
 
-/* line 238, ../../app/assets/stylesheets/public.css.scss */
+/* line 228, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-title,
 .car-section .car-section-description {
   background-color: #E73339;
   color: #fff;
 }
-/* line 243, ../../app/assets/stylesheets/public.css.scss */
+/* line 233, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-slogan h1, .car-section .car-section-slogan h2, .car-section .car-section-slogan h3, .car-section .car-section-slogan h4, .car-section .car-section-slogan h5, .car-section .car-section-slogan h6 {
   color: #E73339;
 }
-/* line 248, ../../app/assets/stylesheets/public.css.scss */
+/* line 238, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-images {
   background-color: #fff;
 }
-/* line 250, ../../app/assets/stylesheets/public.css.scss */
+/* line 240, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-images h1, .car-section .car-section-images h2, .car-section .car-section-images h3, .car-section .car-section-images h4, .car-section .car-section-images h5, .car-section .car-section-images h6 {
   color: #E73339;
 }
-/* line 254, ../../app/assets/stylesheets/public.css.scss */
+/* line 244, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-rates {
   background-color: #eeeddf;
 }
-/* line 256, ../../app/assets/stylesheets/public.css.scss */
+/* line 246, ../../app/assets/stylesheets/public.css.scss */
 .car-section .car-section-rates h1, .car-section .car-section-rates h2, .car-section .car-section-rates h3, .car-section .car-section-rates h4, .car-section .car-section-rates h5, .car-section .car-section-rates h6 {
   color: #E73339;
 }
-/* line 263, ../../app/assets/stylesheets/public.css.scss */
+/* line 253, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .car-section-title,
 .car-section:nth-child(even) .car-section-description {
   background-color: #951B81;
 }
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 257, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .section-caret {
   border-top-color: #951B81;
 }
-/* line 271, ../../app/assets/stylesheets/public.css.scss */
+/* line 261, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .car-section-slogan h1, .car-section:nth-child(even) .car-section-slogan h2, .car-section:nth-child(even) .car-section-slogan h3, .car-section:nth-child(even) .car-section-slogan h4, .car-section:nth-child(even) .car-section-slogan h5, .car-section:nth-child(even) .car-section-slogan h6 {
   color: #951B81;
 }
-/* line 276, ../../app/assets/stylesheets/public.css.scss */
+/* line 266, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .car-section-images h1, .car-section:nth-child(even) .car-section-images h2, .car-section:nth-child(even) .car-section-images h3, .car-section:nth-child(even) .car-section-images h4, .car-section:nth-child(even) .car-section-images h5, .car-section:nth-child(even) .car-section-images h6 {
   color: #951B81;
 }
-/* line 281, ../../app/assets/stylesheets/public.css.scss */
+/* line 271, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .car-section-rates h1, .car-section:nth-child(even) .car-section-rates h2, .car-section:nth-child(even) .car-section-rates h3, .car-section:nth-child(even) .car-section-rates h4, .car-section:nth-child(even) .car-section-rates h5, .car-section:nth-child(even) .car-section-rates h6 {
   color: #951B81;
 }
 
-/* line 290, ../../app/assets/stylesheets/public.css.scss */
+/* line 280, ../../app/assets/stylesheets/public.css.scss */
 #streets-section .section-title-wrapper {
-  background-color: #0097e3;
+  background-color: #689aca;
+  color: #fff;
 }
-/* line 293, ../../app/assets/stylesheets/public.css.scss */
+/* line 284, ../../app/assets/stylesheets/public.css.scss */
 #streets-section .section-caret {
-  border-top-color: #0097e3;
+  border-top-color: #689aca;
+}
+
+/* line 291, ../../app/assets/stylesheets/public.css.scss */
+.carousel-inner > .item > img {
+  text-align: center;
 }
 
 /* PRINT UTILITIES

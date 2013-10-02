@@ -99,17 +99,7 @@ a:focus,
     color: white;
   }
 }
-.copy-text {
-  font-size: 12px;
-  line-height: 18px;
-  font-family: $font-family-serif;
-  h1,h2,h3,h4,h5,h6{
-    color: $brand-primary; 
-  }
-  h2, h3 {
-    font-size: 18px;
-  }
-}
+
 
 #back-to-top {
   position: fixed;
@@ -225,11 +215,11 @@ padding: 0px;
 }
 .services-section {
   .section-caret {
-     border-top-color: #F9B233;
+     border-top-color: #f0652f;
   }
 }
 .services-section-title {
-  background-color: #F9B233;
+  background-color: #f0652f;
   color: #fff;
 }
 .car-section {
@@ -287,16 +277,19 @@ padding: 0px;
 #streets-section {
   
   .section-title-wrapper {
-     background-color: #0097e3;
+     background-color: #689aca;
+     color: #fff;
   }
   .section-caret {
-     border-top-color: #0097e3;
+     border-top-color: #689aca;
   }
 }
 table {
   @extend .table;
 }
-
+.carousel-inner > .item > img {
+  text-align: center;
+}
 /* PRINT UTILITIES
 -------------------------------------------------- */
 .navbar,

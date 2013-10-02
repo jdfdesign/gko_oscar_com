@@ -1,9 +1,6 @@
 //= require jquery_ujs
 //= require remote_form
-//= require portfolio
 //= require jquery.placeholder
-//= require jquery.mixitup.min
-//= require jquery.fitvids
 
 // make console.log safe to use
 window.console || (console = {
@@ -38,32 +35,20 @@ jQuery(function($){
 
     $('.text-container').css({
       left: ($(window).width() - $('.text-container').outerWidth())/2,
-      top: ($(window).height() - 100 - $('.text-container').outerHeight())/2
+      top: ($(window).height() - ($('.navbar').outerHeight()*2) - $('.text-container').outerHeight())/2
     });
   }
   
   /*-----------------------------------------------------------------------------------*/
 	/*	Navigation
 	/*-----------------------------------------------------------------------------------*/
-	
-	var animate = 'down';
-	
+
 	THEME.navigation = function(){ 
-	  jQuery('.navbar').css({top: $(window).height() - 100});
-	  
-	  jQuery(window).bind('scroll', function () {
-	
-  		/* Animation for Top Navigation */
-  		var scrollTop = jQuery(window).scrollTop();
-		
-  		if (scrollTop > jQuery('#cars').offset().top-60 && animate == 'down') {
-  			animate='up';
-  			jQuery('.navbar').stop().animate({top:'0'}, 300);
-  		} else if(scrollTop < jQuery('#cars').offset().top-60 && animate == 'up'){
-  			animate='down';
-  			jQuery('.navbar').stop().animate({top:$(window).height() - 100}, 300);
-  		}
-	  });
+	  var navbarHeight = $('.navbar').height();
+    $(window).bind('scroll', function () {
+      var scrollTop = jQuery(window).scrollTop();
+      scrollTop >= $(window).height() - navbarHeight ? $(".navbar").addClass("fixed") : $(".navbar").removeClass("fixed");
+    });
 	}
 	
   /* ==================================================
@@ -121,25 +106,17 @@ jQuery(function($){
   	}, 250);
   };
 
-  /* ==================================================
-     Responsive Video
-  ================================================== */
-
-  THEME.video = function(){
-  	$('.videoWrapper, .video-embed').fitVids();
-  };
 /*==================================================
   	Init
 ==================================================*/
 
   $(document).ready(function() {
-    Portfolio.init();
-    THEME.fix(); 
+    THEME.fix();
+    THEME.anim(); 
     THEME.textCenter();
     THEME.navigation();
     THEME.scrollToTop();
     THEME.placeholder();
-    THEME.video();
   });
 
 }); 
