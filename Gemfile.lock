@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:jdfdesign/gko_cms4.git
-  revision: b96662a326d2edf81d15bdb3a2445fd996bfaa8f
+  revision: 5d5cf69fa7551c283cf8d0369d12505e1cb531ad
   branch: master
   specs:
     gko_auth (0.6.60.rc8)

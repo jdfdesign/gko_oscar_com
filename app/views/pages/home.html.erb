@@ -32,8 +32,9 @@
 	</section>
 	<% end %>
 	<% if pg = site.sections.named("streets") %>
-	<!-- Begin Services --> 
-	<section id="streets" class="section section-title-wrapper section-padding">
+	<!-- Begin Services -->
+	<section id="streets-section"> 
+	<section class="section section-title-wrapper section-padding">
 	  <div class="container">
       <div class="row">
         <div class="col-xs-12 text-center">
@@ -49,6 +50,7 @@
         <%= pg.body.html_safe %>
       </div>
     </div> 
+	</section>
 	</section>
 	<% end %>
 <%# end %>

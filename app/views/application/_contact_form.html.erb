@@ -27,7 +27,7 @@
       </form> 
     </div>
     <div class="col-sm-6">
-      <% if page_contact = site.sections.find_by_name("contact") %>
+      <% if page_contact = site.sections.find_by_name("quote") %>
           <h2 class="section-title"><%= page_contact.title %></h2>
           <%= render_copy_text(page_contact.body) %> 
       <% end %>

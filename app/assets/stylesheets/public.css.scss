@@ -174,7 +174,7 @@ padding: 0px;
   background-attachment: fixed;
 }
 #intro {
-  
+  max-width: 80%;
 }
 #logo {
   margin-bottom: 24px;
@@ -251,7 +251,7 @@ padding: 0px;
     }
   }
   .car-section-rates {
-    background-color: #fff;
+    background-color: #eeeddf;
     h1, h2, h3, h4, h5, h6 {
       color: #E73339;
     }
@@ -284,10 +284,10 @@ padding: 0px;
   }
 }
 
-#streets {
-  background-color: #0097e3;
+#streets-section {
+  
   .section-title-wrapper {
-     
+     background-color: #0097e3;
   }
   .section-caret {
      border-top-color: #0097e3;

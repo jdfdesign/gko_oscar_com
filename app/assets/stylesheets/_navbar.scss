@@ -10,7 +10,7 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
   left: 0;
   right: 0;
   margin-bottom: 0;
-  
+  border-top: 6px solid #E73339;
   @media (min-width: $grid-float-breakpoint) {
     min-height: $navbar-height-md;
     padding-top: $navbar-padding-vertical-md;

@@ -63,7 +63,7 @@ $brand-info:            #5bc0de;
 // Scaffolding
 // -------------------------
 
-$body-bg:               #fff;
+$body-bg:               #eeeddf;//#fff;
 $text-color:            $gray-dark;
 
 // Links
@@ -268,7 +268,7 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;//$gray-light;
-$navbar-inverse-link-hover-color:           $brand-primary;//#fff;
+$navbar-inverse-link-hover-color:           #000;//#fff;
 $navbar-inverse-link-hover-bg:              transparent;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-link-active-bg:             transparent;//darken($navbar-inverse-bg, 10%);
