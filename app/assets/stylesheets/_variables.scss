@@ -54,8 +54,8 @@ $gray-lighter:           lighten(#000, 93.5%); // #eee
 // Brand colors
 // -------------------------
 
-$brand-primary:         $accent-color;//rgb(31, 197, 248);//#428bca;
-$brand-success:         #5cb85c;
+$brand-primary:         #95c11f;//rgb(31, 197, 248);//#428bca;
+$brand-success:         #3fc380;
 $brand-warning:         #f0ad4e;
 $brand-danger:          #d9534f;
 $brand-info:            #5bc0de;
@@ -75,12 +75,12 @@ $link-hover-color:      lighten($link-color, 10%);//darken($link-color, 15%);
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       'Vidaloka', "Libre Baskerville", Georgia, "Times New Roman", Times, serif;
+$font-family-sans-serif:  "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       'ltc-bodoni-175', Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          14px;
+$font-size-base:          16px;//14px;
 $font-size-large:         ceil($font-size-base * 1.25); // ~18px
 $font-size-small:         ceil($font-size-base * 0.85); // ~12px
 

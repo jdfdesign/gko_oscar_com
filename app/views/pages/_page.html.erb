@@ -1,0 +1,30 @@
+<% if local_assigns.has_key? :record %> 
+<%= render_slideshow_for(record) %>  
+<article id="<%= dom_id(record) %>_page" class="section section-padding <%= record.name %>-section">
+  <div class="container"> 
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="page-title text-center"><%= record.title %></h2>
+      <hr>
+      <%= render_copy_text(record.body) %>
+      </div> 
+    </div> 
+  </div>
+  <% if record.children.in_menu.try(:any?) %>
+  <div id="services" class="container">
+    <div class="row">
+        <% record.children.in_menu.each do |p| %>
+        <div class="col-xs-6 col-sm-3">
+          <div class="thumbnail">
+            <div class="caption"> 
+              <h3><%= raw p.title %></h3>
+              <p><%= raw p.body %></p>
+            </div>
+          </div>
+        </div> 
+        <% end %>
+    </div>
+   </div>
+  <% end %>  
+</article>
+<% end %>

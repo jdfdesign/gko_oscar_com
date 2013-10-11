@@ -1,0 +1,51 @@
+<% if local_assigns.has_key? :record %>
+<section id="<%= dom_id(record) %>_page" class="car-section">
+  <section class="section car-section-title section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 intro text-center">
+          <h2 class="page-title"><%= raw record.title %></h2>
+          <hr>
+          <div class="section-slogan"><%= get_text_element(record,'slogan') %></div>
+        </div>
+      </div>
+  </section> 
+  <% if record.images.try(:any?) %>
+  <section class="section car-section-images"> 
+    <div class="section-caret"></div>
+    <div class="section-caret section-caret-top"></div> 
+    <div class="carousel slide" id="carousel" data-interval="3000">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <% record.images.each_with_index do |img, idx| %>
+          <div class="item <%= 'active' if idx == 0 %>"><%= image_fu(img) %></div>
+        <% end %>
+      </div>
+      <!-- Carousel nav -->
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a> 
+    </div>
+  </section>
+  <% end %> 
+  <section class="section car-section-description section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="text"><%= raw record.body %></div>
+        </div>
+        <div class="col-sm-6">
+          <div class="text"><%= get_text_element(record,'rates') %></div>
+        </div>
+      </div>
+      <div class="col-xs-2">
+        <%= link_to("A question ?", "#contacts", :class => "btn btn-default btn-lg btn-block")%>
+      </div>
+    </div> 
+  </section> 
+</section>
+<% end %>

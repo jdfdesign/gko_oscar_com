@@ -1,9 +1,31 @@
 /* CONTACT STYLES
 -------------------------------------------------- */ 
-#contacts { 
+.contact-section { 
   padding-top: $line-height-computed * 3;
   padding-bottom: $line-height-computed * 3;
-  background-color: $accent-color;
+  background-color: $brand-primary;
+  .contact {
+    text-align: center;
+    a {
+      color: #fff;
+      @include transition(all 0.4s ease-in-out);
+      &:hover {
+        text-decoration: none; 
+        color: $gray;
+      }
+    }
+  }
+  #submit {
+     background-color: #5C5C5C;
+     text-transform: uppercase;
+     font-weight: normal;
+     font-weight: 400;
+     letter-spacing: 2px;
+     @include transition(all 0.4s ease-in-out);
+     &:hover {
+       background-color: $gray;
+     }
+  }
 }
 .form-control {
   @include box-shadow(none); 

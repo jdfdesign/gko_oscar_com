@@ -4,24 +4,20 @@
 <body id='<%= @body_id %>'> 
   <div id="page-wrapper">
     <section id="header" class="section intro-section-title section-padding">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-            <div id="intro" class="text-container">
-              <%= image_tag("logo-inverse.png", :id => "logo") %>
-              <h1><%= resource.title.html_safe %></h1>
-              <div class="text"><%= resource.body.html_safe %></div>
-              <div id="explore"><a class="scroll" href="#cars"><i class="icon-angle-down icon-4x"></i></a></div>
-            </div>
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <div id="intro" class="text-container">
+            <%= image_tag("logo-inverse.png", :id => "logo") %>
+            <div class="text"><%= raw resource.body %></div> 
           </div>
+        </div>
+      </div>
   	</section>
     <%= render "navbar" %>
     <section class="main-content">
       <%= yield %>
     </section>
-    <section id="contacts">
-      <%= render "contact_form" %>
-    </section>
-    
+
     <!-- START COPYRIGHT -->
     <section id="copyright">
       <div class="container">

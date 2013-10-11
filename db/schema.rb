@@ -10,9 +10,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131001105105) do
+ActiveRecord::Schema.define(:version => 20131010063418) do
 
-  create_table "assets", :force => true do |t|
+  create_table "gko_assets", :force => true do |t|
     t.integer  "site_id"
     t.string   "content_type"
     t.integer  "width"
@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",      :null => false
   end
 
-  add_index "assets", ["site_id"], :name => "index_assets_on_site_id"
+  add_index "gko_assets", ["site_id"], :name => "gko_index_assets_on_site_id"
 
-  create_table "content_translations", :force => true do |t|
-    t.integer  "content_id"
+  create_table "gko_content_translations", :force => true do |t|
+    t.integer  "gko_content_id"
     t.string   "locale"
     t.string   "meta_title"
     t.text     "body"
@@ -38,10 +38,10 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",       :null => false
   end
 
-  add_index "content_translations", ["content_id"], :name => "index_content_translations_on_content_id"
-  add_index "content_translations", ["locale"], :name => "index_content_translations_on_locale"
+  add_index "gko_content_translations", ["gko_content_id"], :name => "gko_index_content_translations_on_content_id"
+  add_index "gko_content_translations", ["locale"], :name => "gko_index_content_translations_on_locale"
 
-  create_table "contents", :force => true do |t|
+  create_table "gko_contents", :force => true do |t|
     t.integer  "site_id"
     t.integer  "section_id"
     t.integer  "account_id"
@@ -61,13 +61,13 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.integer  "access_count",                    :default => 0
   end
 
-  add_index "contents", ["access_count"], :name => "index_contents_on_access_count"
-  add_index "contents", ["position", "section_id"], :name => "index_contents_on_position_and_section_id"
-  add_index "contents", ["section_id"], :name => "index_contents_on_section_id"
-  add_index "contents", ["site_id"], :name => "index_contents_on_site_id"
-  add_index "contents", ["slug"], :name => "index_contents_on_slug"
+  add_index "gko_contents", ["access_count"], :name => "gko_index_contents_on_access_count"
+  add_index "gko_contents", ["position", "section_id"], :name => "gko_index_contents_on_position_and_section_id"
+  add_index "gko_contents", ["section_id"], :name => "gko_index_contents_on_section_id"
+  add_index "gko_contents", ["site_id"], :name => "gko_index_contents_on_site_id"
+  add_index "gko_contents", ["slug"], :name => "gko_index_contents_on_slug"
 
-  create_table "document_assignments", :force => true do |t|
+  create_table "gko_document_assignments", :force => true do |t|
     t.integer  "position",                      :default => 1, :null => false
     t.integer  "document_id",                                  :null => false
     t.integer  "attachable_id",                                :null => false
@@ -76,9 +76,9 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",                                   :null => false
   end
 
-  add_index "document_assignments", ["attachable_id", "attachable_type"], :name => "index_document_assignments_on_attachable_id_and_attachable_type"
+  add_index "gko_document_assignments", ["attachable_id", "attachable_type"], :name => "gko_index_document_assignments_on_attachable_id_and_type"
 
-  create_table "document_items", :force => true do |t|
+  create_table "gko_document_items", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.date     "published_at"
@@ -102,23 +102,23 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.string   "language",           :limit => 5
   end
 
-  add_index "document_items", ["country_id"], :name => "index_press_articles_on_country_id"
-  add_index "document_items", ["section_id"], :name => "index_press_articles_on_section_id"
-  add_index "document_items", ["site_id"], :name => "index_press_articles_on_site_id"
+  add_index "gko_document_items", ["country_id"], :name => "gko_index_press_articles_on_country_id"
+  add_index "gko_document_items", ["section_id"], :name => "gko_index_press_articles_on_section_id"
+  add_index "gko_document_items", ["site_id"], :name => "gko_index_press_articles_on_site_id"
 
-  create_table "document_translations", :force => true do |t|
-    t.integer  "document_id"
+  create_table "gko_document_translations", :force => true do |t|
+    t.integer  "gko_document_id"
     t.string   "locale"
     t.string   "title"
     t.text     "alt"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
-  add_index "document_translations", ["document_id"], :name => "index_document_translations_on_document_id"
-  add_index "document_translations", ["locale"], :name => "index_document_translations_on_locale"
+  add_index "gko_document_translations", ["gko_document_id"], :name => "gko_index_document_translations_on_document_id"
+  add_index "gko_document_translations", ["locale"], :name => "gko_index_document_translations_on_locale"
 
-  create_table "documents", :force => true do |t|
+  create_table "gko_documents", :force => true do |t|
     t.string   "title",                      :limit => 100
     t.string   "lang",                       :limit => 4
     t.string   "alt"
@@ -133,7 +133,7 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.string   "document_ext"
   end
 
-  create_table "image_assignments", :force => true do |t|
+  create_table "gko_image_assignments", :force => true do |t|
     t.integer  "position",                      :default => 1, :null => false
     t.integer  "image_id",                                     :null => false
     t.integer  "attachable_id",                                :null => false
@@ -142,9 +142,9 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",                                   :null => false
   end
 
-  add_index "image_assignments", ["attachable_id", "attachable_type"], :name => "index_image_assignments_on_attachable_id_and_attachable_type"
+  add_index "gko_image_assignments", ["attachable_id", "attachable_type"], :name => "gko_index_image_assignments_on_attachable_id_and_type"
 
-  create_table "image_folders", :force => true do |t|
+  create_table "gko_image_folders", :force => true do |t|
     t.string   "name"
     t.integer  "site_id"
     t.integer  "parent_id"
@@ -155,17 +155,17 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "image_folders_images", :id => false, :force => true do |t|
+  create_table "gko_image_folders_gko_images", :id => false, :force => true do |t|
     t.integer  "image_folder_id"
     t.integer  "image_id"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
-  add_index "image_folders_images", ["image_folder_id", "image_id"], :name => "index_image_folders_images_on_image_folder_id_and_image_id"
-  add_index "image_folders_images", ["image_id", "image_folder_id"], :name => "index_image_folders_images_on_image_id_and_image_folder_id"
+  add_index "gko_image_folders_gko_images", ["image_folder_id", "image_id"], :name => "gko_index_image_folders_images_on_folder_id_and_image_id"
+  add_index "gko_image_folders_gko_images", ["image_id", "image_folder_id"], :name => "gko_index_image_folders_images_on_image_id_and_folder_id"
 
-  create_table "images", :force => true do |t|
+  create_table "gko_images", :force => true do |t|
     t.integer  "site_id"
     t.integer  "image_assignments_count", :default => 0
     t.datetime "created_at",                             :null => false
@@ -178,7 +178,9 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.string   "image_uid"
   end
 
-  create_table "inquiries", :force => true do |t|
+  add_index "gko_images", ["site_id"], :name => "index_gko_images_on_site_id"
+
+  create_table "gko_inquiries", :force => true do |t|
     t.string   "type"
     t.string   "confirmation_code", :limit => 40
     t.string   "to_email"
@@ -195,7 +197,9 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.integer  "site_id"
   end
 
-  create_table "languages", :force => true do |t|
+  add_index "gko_inquiries", ["site_id"], :name => "index_gko_inquiries_on_site_id"
+
+  create_table "gko_languages", :force => true do |t|
     t.integer  "site_id"
     t.string   "name"
     t.string   "code"
@@ -207,10 +211,10 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",                      :null => false
   end
 
-  add_index "languages", ["site_id", "position"], :name => "index_languages_on_site_id_and_position"
-  add_index "languages", ["site_id"], :name => "index_languages_on_site_id"
+  add_index "gko_languages", ["site_id", "position"], :name => "gko_index_languages_on_site_id_and_position"
+  add_index "gko_languages", ["site_id"], :name => "gko_index_languages_on_site_id"
 
-  create_table "mail_methods", :force => true do |t|
+  create_table "gko_mail_methods", :force => true do |t|
     t.integer  "site_id",                                                       :null => false
     t.string   "environment",            :default => "production"
     t.boolean  "enable_mail_delivery",   :default => true
@@ -227,20 +231,20 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",                                                    :null => false
   end
 
-  add_index "mail_methods", ["site_id"], :name => "index_mail_methods_on_site_id"
+  add_index "gko_mail_methods", ["site_id"], :name => "gko_index_mail_methods_on_site_id"
 
-  create_table "partner_translations", :force => true do |t|
-    t.integer  "partner_id"
+  create_table "gko_partner_translations", :force => true do |t|
+    t.integer  "gko_partner_id"
     t.string   "locale"
     t.text     "body"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
-  add_index "partner_translations", ["locale"], :name => "index_partner_translations_on_locale"
-  add_index "partner_translations", ["partner_id"], :name => "index_partner_translations_on_partner_id"
+  add_index "gko_partner_translations", ["gko_partner_id"], :name => "gko_index_partner_translations_on_partner_id"
+  add_index "gko_partner_translations", ["locale"], :name => "gko_index_partner_translations_on_locale"
 
-  create_table "partners", :force => true do |t|
+  create_table "gko_partners", :force => true do |t|
     t.string   "title"
     t.text     "body"
     t.string   "link"
@@ -258,11 +262,11 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.integer  "position",        :default => 1
   end
 
-  add_index "partners", ["position", "section_id"], :name => "index_partners_on_position_and_section_id"
-  add_index "partners", ["section_id"], :name => "index_partners_on_section_id"
-  add_index "partners", ["site_id"], :name => "index_partners_on_site_id"
+  add_index "gko_partners", ["position", "section_id"], :name => "gko_index_partners_on_position_and_section_id"
+  add_index "gko_partners", ["section_id"], :name => "gko_index_partners_on_section_id"
+  add_index "gko_partners", ["site_id"], :name => "gko_index_partners_on_site_id"
 
-  create_table "preferences", :force => true do |t|
+  create_table "gko_preferences", :force => true do |t|
     t.string   "key",                      :null => false
     t.string   "value_type", :limit => 50
     t.string   "value"
@@ -270,22 +274,22 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at",               :null => false
   end
 
-  add_index "preferences", ["key"], :name => "index_preferences_on_key", :unique => true
+  add_index "gko_preferences", ["key"], :name => "gko_index_preferences_on_key", :unique => true
 
-  create_table "roles", :force => true do |t|
+  create_table "gko_roles", :force => true do |t|
     t.string "name"
   end
 
-  create_table "roles_users", :id => false, :force => true do |t|
+  create_table "gko_roles_gko_users", :id => false, :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
   end
 
-  add_index "roles_users", ["role_id"], :name => "index_roles_users_on_role_id"
-  add_index "roles_users", ["user_id"], :name => "index_roles_users_on_user_id"
+  add_index "gko_roles_gko_users", ["role_id"], :name => "gko_index_roles_users_on_role_id"
+  add_index "gko_roles_gko_users", ["user_id"], :name => "gko_index_roles_users_on_user_id"
 
-  create_table "section_translations", :force => true do |t|
-    t.integer  "section_id"
+  create_table "gko_section_translations", :force => true do |t|
+    t.integer  "gko_section_id"
     t.string   "locale"
     t.string   "meta_title"
     t.string   "path"
@@ -300,10 +304,10 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.text     "alt"
   end
 
-  add_index "section_translations", ["locale"], :name => "index_section_translations_on_locale"
-  add_index "section_translations", ["section_id"], :name => "index_section_translations_on_section_id"
+  add_index "gko_section_translations", ["gko_section_id"], :name => "gko_index_section_translations_on_section_id"
+  add_index "gko_section_translations", ["locale"], :name => "gko_index_section_translations_on_locale"
 
-  create_table "sections", :force => true do |t|
+  create_table "gko_sections", :force => true do |t|
     t.integer  "site_id"
     t.integer  "parent_id"
     t.integer  "link_id"
@@ -334,23 +338,26 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.text     "alt"
   end
 
-  add_index "sections", ["link_id", "link_type"], :name => "index_sections_on_link_id_and_link_type"
-  add_index "sections", ["parent_id", "lft"], :name => "index_sections_on_parent_id_and_lft"
+  add_index "gko_sections", ["lft"], :name => "index_gko_sections_on_lft"
+  add_index "gko_sections", ["link_id", "link_type"], :name => "gko_index_sections_on_link_id_and_link_type"
+  add_index "gko_sections", ["parent_id", "lft"], :name => "gko_index_sections_on_parent_id_and_lft"
+  add_index "gko_sections", ["parent_id"], :name => "index_gko_sections_on_parent_id"
+  add_index "gko_sections", ["rgt"], :name => "index_gko_sections_on_rgt"
 
-  create_table "site_translations", :force => true do |t|
-    t.integer  "site_id"
+  create_table "gko_site_translations", :force => true do |t|
+    t.integer  "gko_site_id"
     t.string   "locale"
     t.string   "meta_title"
     t.string   "title"
     t.string   "subtitle"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
-  add_index "site_translations", ["locale"], :name => "index_site_translations_on_locale"
-  add_index "site_translations", ["site_id"], :name => "index_site_translations_on_site_id"
+  add_index "gko_site_translations", ["gko_site_id"], :name => "gko_index_site_translations_on_site_id"
+  add_index "gko_site_translations", ["locale"], :name => "gko_index_site_translations_on_locale"
 
-  create_table "sites", :force => true do |t|
+  create_table "gko_sites", :force => true do |t|
     t.string   "host"
     t.string   "title"
     t.string   "meta_title"
@@ -371,29 +378,29 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.text     "mailer_settings"
   end
 
-  add_index "sites", ["host"], :name => "index_sites_on_host", :unique => true
+  add_index "gko_sites", ["host"], :name => "gko_index_sites_on_host", :unique => true
 
-  create_table "text_element_translations", :force => true do |t|
-    t.integer  "text_element_id"
+  create_table "gko_text_element_translations", :force => true do |t|
+    t.integer  "gko_text_element_id"
     t.string   "locale"
     t.text     "content"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
-  add_index "text_element_translations", ["locale", "text_element_id"], :name => "index_text_element_translations_on_locale_and_text_element_id"
+  add_index "gko_text_element_translations", ["locale", "gko_text_element_id"], :name => "gko_index_text_element_translations_on_text_element"
 
-  create_table "text_elements", :force => true do |t|
+  create_table "gko_text_elements", :force => true do |t|
     t.integer "section_id"
     t.string  "name"
     t.text    "content"
     t.integer "position",   :default => 1
   end
 
-  add_index "text_elements", ["name"], :name => "index_text_elements_on_name"
-  add_index "text_elements", ["section_id"], :name => "index_text_elements_on_section_id"
+  add_index "gko_text_elements", ["name"], :name => "gko_index_text_elements_on_name"
+  add_index "gko_text_elements", ["section_id"], :name => "gko_index_text_elements_on_section_id"
 
-  create_table "tokenized_permissions", :force => true do |t|
+  create_table "gko_tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
     t.string   "permissable_type"
     t.string   "token"
@@ -401,9 +408,9 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.datetime "updated_at"
   end
 
-  add_index "tokenized_permissions", ["permissable_id", "permissable_type"], :name => "index_tokenized_name_and_type"
+  add_index "gko_tokenized_permissions", ["permissable_id", "permissable_type"], :name => "gko_index_tokenized_name_and_type"
 
-  create_table "users", :force => true do |t|
+  create_table "gko_users", :force => true do |t|
     t.string   "email",                                   :default => "", :null => false
     t.string   "encrypted_password",       :limit => 128, :default => "", :null => false
     t.string   "confirmation_token"
@@ -437,7 +444,8 @@ ActiveRecord::Schema.define(:version => 20131001105105) do
     t.integer  "site_id"
   end
 
-  add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
-  add_index "users", ["site_id"], :name => "index_users_on_site_id"
+  add_index "gko_users", ["email"], :name => "index_gko_users_on_email", :unique => true
+  add_index "gko_users", ["persistence_token"], :name => "gko_index_users_on_persistence_token"
+  add_index "gko_users", ["site_id"], :name => "gko_index_users_on_site_id"
 
 end

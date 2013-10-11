@@ -9,35 +9,18 @@ Author URI:         http://oscar.com
 
 /* THEME VARIABLES
 -------------------------------------------------- */
-$accent-color: #95c11f;
-$theme-color: #d61941; 
-$max-image-width: 1200px;
-$th-footer-height: 100px;
 
 /* THEME MIXINS
 -------------------------------------------------- */
-@mixin center-nav {
-	@include clearfix();
-	text-align:center;
-	margin: 0;
-	width: 100%;
-	> li {
-		text-align:center;
-		float:none;
-		display:inline-block;
-	}
-}
 
 /* IMPORTS
 -------------------------------------------------- */
 @import "variables"; 
 @import "bootstrap-3.0.0/bootstrap";
-@import 'font-awesome-3.2.1/font-awesome';
-@import "effects";
+@import "font-awesome-3.2.1/font-awesome";
 @import "navbar";
 @import "footer";
 @import "contact";
-@import "home";
 
 /* FIX FOR IE DEVICE_WIDTH BUG
 -------------------------------------------------- */
@@ -46,7 +29,6 @@ $th-footer-height: 100px;
 @-ms-viewport{width:device-width}
 @-o-viewport{width:device-width}
 @viewport{width:device-width}
-
 
 // Color for the placeholder plugin
 .placeholder {
@@ -81,26 +63,6 @@ a:focus,
 // Buttons
 // -------------------------
 
-.btn {
-  @include transition(all 0.4s ease-in-out); 
-}
-.btn-big {
-  text-transform: uppercase;
-  font-weight: normal;
-  font-weight: 400;
-  letter-spacing: 2px;
-  
-}
-.btn-primary {
-  border: none;
-  &:hover { 
-    border: none;
-    background-color: lighten($brand-primary, 10%); 
-    color: white;
-  }
-}
-
-
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -111,51 +73,37 @@ a:focus,
   width: 50px;
   height: 42px;
   line-height: 42px;
-  background-color: #323A45;
+  background-color: #505050;
+  color: #fff;
   @include transition(all 0.4s ease-in-out);
-} 
-/* REMOTE PAGE CONTAINER
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $brand-primary;
+  }
+}
+
+/* HEADER
 -------------------------------------------------- */
-#project-page {
-  display: none;
-}
-
-.main-content {
-  //padding-top: $line-height-computed * 4;
-  //padding-bottom: $line-height-computed * 4;
-}
 html, body, #page-wrapper {
-width: 100%;
-height: 100%;
-margin: 0px;
-padding: 0px;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-}
-
-#page-wrapper {
-width: 100%;
-height: 100%;
-margin: 0px;
-padding: 0px;
-
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  @include box-sizing(border-box);
 }
 
 #header{
-  overflow:hidden;
-  height:auto;
+  overflow: hidden;
+  height: auto;
   background: image-url('bg.jpg') fixed no-repeat; 
-  height:100%;
-  color: #fff;
-  h1 {
-    color:$accent-color;
+  height: 100%;
+  h2 {
+    color:$brand-primary;
     font-family: $font-family-cursive;
   }
-  p {
-    font-weight: 300;
-  }
- }
+}
+
 .no-touch #header{
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -163,13 +111,16 @@ padding: 0px;
   background-size: cover;
   background-attachment: fixed;
 }
+
 #intro {
   max-width: 80%;
 }
+
 #logo {
   margin-bottom: 24px;
 }
-/* PAGE HEADER 
+
+/* PAGE SECTIONS 
 -------------------------------------------------- */
 
 .section-padding {
@@ -179,7 +130,7 @@ padding: 0px;
 .section {
   position: relative;
 }
-.section-title {
+.page-title {
  font-family:$font-family-serif;
  text-transform: uppercase; 
 }
@@ -211,85 +162,67 @@ padding: 0px;
   }
 }
 .section-slogan {
-  font-family: $font-family-cursive;
-}
-.services-section {
-  .section-caret {
-     border-top-color: #f0652f;
+  h3 {
+    font-family: $font-family-cursive;
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #000;
+    @include opacity(.5);
   }
 }
-.services-section-title {
-  background-color: #f0652f;
-  color: #fff;
-}
+
 .car-section {
   .car-section-title,
   .car-section-description {
     background-color: #E73339;
     color: #fff;
   }
-  .car-section-slogan {
-    h1, h2, h3, h4, h5, h6 {
-      
-      color: #E73339; 
-    }
-  } 
   .car-section-images {
     background-color: #fff;
-    h1, h2, h3, h4, h5, h6 {
-      color: #E73339;
-    }
-  }
-  .car-section-rates {
-    background-color: #eeeddf;
-    h1, h2, h3, h4, h5, h6 {
-      color: #E73339;
-    }
-
   }
   &:nth-child(even) {
     .car-section-title,
     .car-section-description {
-      background-color: #951B81; 
+      background-color: #f0652f; 
       
     }
     .section-caret {
-      border-top-color: #951B81;
+      border-top-color: #f0652f;
     } 
-    .car-section-slogan {
-      h1, h2, h3, h4, h5, h6 {
-        color: #951B81; 
-      }
-    }
-    .car-section-images {
-      h1, h2, h3, h4, h5, h6 {
-        color: #951B81;
-      }
-    }
-    .car-section-rates {
-      h1, h2, h3, h4, h5, h6 {
-        color: #951B81;
-      }
-    }
   }
+}
+/* STREETS SECTION
+-------------------------------------------------- */
+.description-section {
+  background-color: $brand-primary;
+  color: #fff;
+}
+/* SERVICES SECTION
+-------------------------------------------------- */
+.services-section {
+  background-color: #89c4f4;
+  color: #fff;
+}
+/* STREETS SECTION
+-------------------------------------------------- */
+.streets-section {
+  background-color: #5dc2a6;
+  color: #fff;
+} 
+/* CONDITIONS SECTION
+-------------------------------------------------- */
+.conditions-section {
+  background-color: #5C5C5C;
+  color: #fff;
 }
 
-#streets-section {
-  
-  .section-title-wrapper {
-     background-color: #689aca;
-     color: #fff;
-  }
-  .section-caret {
-     border-top-color: #689aca;
-  }
-}
 table {
   @extend .table;
 }
 .carousel-inner > .item > img {
   text-align: center;
 }
+.carousel-inner > .item > img { margin: 0 auto; }
 /* PRINT UTILITIES
 -------------------------------------------------- */
 .navbar,

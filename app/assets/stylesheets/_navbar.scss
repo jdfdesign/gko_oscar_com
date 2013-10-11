@@ -20,19 +20,20 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
       @include pull-right;
     }
   }
-} 
+}
+ 
 .navbar.fixed {
   position: fixed;
   top: 0;
   bottom: auto;
   background-color: #222;
-  border-top-color: $brand-primary;
 }
+
 .navbar-nav {
   > li > a {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: $font-size-base - 2;
+    font-size: 11px;
     @include transition(all 0.3s ease-in-out);
   }
   @media (min-width: $grid-float-breakpoint) {
@@ -45,17 +46,26 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
   padding-top: 0;
   padding-bottom: 0;
 }
+
+/* CUSTOMIZE THE LANGUAGE MENU
+-------------------------------------------------- */
 #locales-menu {
-  position: absolute;
+  position: fixed;
+  z-index: $zindex-navbar-fixed + 1;
   right: 0;
+  left: 0;
   top: 0;
+  border-top: 4px solid $brand-primary;
+  .nav {
+    float: right;
+  }
   .nav > li > a { 
     background-color: $brand-primary;
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: $font-size-base - 5;
-    padding: 4px 8px;
+    padding: 4px 20px;
     @include transition(all 0.3s ease-in-out);
     &:hover,
     &:focus {
