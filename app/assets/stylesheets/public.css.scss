@@ -59,10 +59,22 @@ a:focus,
 	background-color: #000;
 	color: #fff;
 }
+.copy-text {
+  table {
+    @extend .table;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
+/* PRINT UTILITIES
+-------------------------------------------------- */
+.navbar, #footer, #sidebar, form {
+  @extend .hidden-print;
+}
 
-// Buttons
-// -------------------------
-
+/* BACK-TO-TOP 
+-------------------------------------------------- */
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -83,6 +95,14 @@ a:focus,
   }
 }
 
+/* CAROUSEL
+-------------------------------------------------- */
+.carousel {
+  background-color: #fff;
+}
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
 /* HEADER
 -------------------------------------------------- */
 html, body, #page-wrapper {
@@ -92,7 +112,9 @@ html, body, #page-wrapper {
   padding: 0px;
   @include box-sizing(border-box);
 }
-
+body {
+  font-weight: 300;
+}
 #header{
   overflow: hidden;
   height: auto;
@@ -122,114 +144,131 @@ html, body, #page-wrapper {
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
+.section { 
+  position :relative; // for caret 
+  .section-caret {
+    width: 0;
+    height: 0;
+    border-top:   22px solid #E73339;
+    border-right: 22px solid transparent;
+    border-left:  22px solid transparent;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-left: -11px;
+    // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
+    // we can just straight up remove this.
+    border-bottom: 0 dotted;
+    content: "";
 
+    &.section-caret-top {
+      top: auto; 
+      bottom: -22px; 
+      border-top-color: #fff;
+
+      // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
+      // we can just straight up remove this.
+      border-bottom: 0 dotted; 
+    }
+  }
+}
 .section-padding {
   padding-top: $line-height-computed * 3;
   padding-bottom: $line-height-computed * 3;
 }
-.section {
-  position: relative;
-}
 .page-title {
- font-family:$font-family-serif;
- text-transform: uppercase; 
-}
-
-.section-caret {
-  width: 0;
-  height: 0;
-  border-top:   22px solid #E73339;
-  border-right: 22px solid transparent;
-  border-left:  22px solid transparent;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 50%;
-  margin-left: -11px;
-  // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
-  // we can just straight up remove this.
-  border-bottom: 0 dotted;
-  content: "";
-  
-  &.section-caret-top {
-    top: auto; 
-    bottom: -22px; 
-    border-top-color: #fff;
-
-    // Firefox fix for https://github.com/twbs/bootstrap/issues/9538. Once fixed,
-    // we can just straight up remove this.
-    border-bottom: 0 dotted; 
-  }
+ font-family: $font-family-serif;
+ text-transform: normal; 
 }
 .section-slogan {
   h3 {
     font-family: $font-family-cursive;
-    letter-spacing: 2px;
-    font-size: 18px;
     color: #000;
-    @include opacity(.5);
+    @include opacity(.7);
   }
 }
 
-.car-section {
-  .car-section-title,
-  .car-section-description {
-    background-color: #E73339;
-    color: #fff;
+.car-section { 
+  background-color: #f0652f;
+  .section-caret {
+    border-top-color: #f0652f;
   }
-  .car-section-images {
-    background-color: #fff;
-  }
+  
   &:nth-child(even) {
-    .car-section-title,
-    .car-section-description {
-      background-color: #f0652f; 
-      
-    }
+    background-color: #E73339;
     .section-caret {
-      border-top-color: #f0652f;
+      border-top-color: #E73339;
     } 
+  }
+}
+
+.btn-link {
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic; 
+  &:hover {
+    color: #000;
+    text-decoration: underline; 
   }
 }
 /* STREETS SECTION
 -------------------------------------------------- */
 .description-section {
   background-color: $brand-primary;
-  color: #fff;
 }
 /* SERVICES SECTION
 -------------------------------------------------- */
 .services-section {
   background-color: #89c4f4;
-  color: #fff;
+}
+.thumbnail {
+  text-align: center;
+  .caption {
+    h4 {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+.thumbnail-icon {
+  @include square(108px);
+  border: 6px solid lighten(#89c4f4, 15%);
+  margin: 0 auto;
+  background: darken(#89c4f4, 15%) image-url('web_icons.png') no-repeat left top;
+}
+.thumbnail-wrapper:nth-child(1) {
+  .thumbnail-icon {
+    background-position: 4px 0;
+   }
+}
+.thumbnail-wrapper:nth-child(2) {
+  .thumbnail-icon {
+    background-position: -78px 0;
+   }
+}
+.thumbnail-wrapper:nth-child(3) {
+  .thumbnail-icon {
+    background-position: -164px 0;
+   }
+}
+.thumbnail-wrapper:nth-child(4) {
+  .thumbnail-icon {
+    background-position: -250px 0;
+   }
 }
 /* STREETS SECTION
 -------------------------------------------------- */
 .streets-section {
   background-color: #5dc2a6;
-  color: #fff;
 } 
 /* CONDITIONS SECTION
 -------------------------------------------------- */
 .conditions-section {
   background-color: #5C5C5C;
-  color: #fff;
 }
 
-table {
-  @extend .table;
-}
-.carousel-inner > .item > img {
-  text-align: center;
-}
-.carousel-inner > .item > img { margin: 0 auto; }
-/* PRINT UTILITIES
--------------------------------------------------- */
-.navbar,
-#footer,
-#sidebar,
-form {
-  @extend .hidden-print;
-} 
+
+
 
  

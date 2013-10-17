@@ -1,5 +1,5 @@
 <%# cache ['home', site, I18n.locale] do %>
-<% resource.children.in_menu.each do |p| %>
+<% resource.children.live.each do |p| %>
   <%= render((p.template.present? ? p.template : 'page'), :record => p) %>
 <% end %>
 <%# end %>

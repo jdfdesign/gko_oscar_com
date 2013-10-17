@@ -341,9 +341,9 @@ table {
   }
 
   /* line 76, ../../app/assets/stylesheets/bootstrap-3.0.0/_print.scss */
-  .table td, table td,
+  .table td, .copy-text table td,
   .table th,
-  table th {
+  .copy-text table th {
     background-color: #fff !important;
   }
 
@@ -359,7 +359,7 @@ table {
   }
 
   /* line 90, ../../app/assets/stylesheets/bootstrap-3.0.0/_print.scss */
-  .table, table {
+  .table, .copy-text table {
     border-collapse: collapse !important;
   }
 
@@ -389,8 +389,8 @@ body {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42857;
-  color: #333333;
-  background-color: #eeeddf;
+  color: white;
+  background-color: #5c5c5c;
 }
 
 /* line 34, ../../app/assets/stylesheets/bootstrap-3.0.0/_scaffolding.scss */
@@ -413,12 +413,12 @@ textarea {
 
 /* line 54, ../../app/assets/stylesheets/bootstrap-3.0.0/_scaffolding.scss */
 a {
-  color: #95c11f;
+  color: white;
   text-decoration: none;
 }
 /* line 59, ../../app/assets/stylesheets/bootstrap-3.0.0/_scaffolding.scss */
 a:hover, a:focus {
-  color: #b0de35;
+  color: black;
   text-decoration: underline;
 }
 /* line 64, ../../app/assets/stylesheets/bootstrap-3.0.0/_scaffolding.scss */
@@ -449,8 +449,8 @@ img {
 .img-thumbnail, .thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #eeeddf;
-  border: 1px solid #dddddd;
+  background-color: transparent;
+  border: 1px solid none;
   border-radius: 0;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1794,51 +1794,51 @@ th {
 }
 
 /* line 17, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table, table {
+.table, .copy-text table {
   width: 100%;
   margin-bottom: 22px;
 }
 /* line 26, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table thead > tr > th, table thead > tr > th,
+.table thead > tr > th, .copy-text table thead > tr > th,
 .table thead > tr > td,
-table thead > tr > td,
+.copy-text table thead > tr > td,
 .table tbody > tr > th,
-table tbody > tr > th,
+.copy-text table tbody > tr > th,
 .table tbody > tr > td,
-table tbody > tr > td,
+.copy-text table tbody > tr > td,
 .table tfoot > tr > th,
-table tfoot > tr > th,
+.copy-text table tfoot > tr > th,
 .table tfoot > tr > td,
-table tfoot > tr > td {
+.copy-text table tfoot > tr > td {
   padding: 8px;
   line-height: 1.42857;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
 /* line 35, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table thead > tr > th, table thead > tr > th {
+.table thead > tr > th, .copy-text table thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #dddddd;
 }
 /* line 44, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table caption + thead tr:first-child th, table caption + thead tr:first-child th, .table caption + thead tr:first-child td, table caption + thead tr:first-child td,
+.table caption + thead tr:first-child th, .copy-text table caption + thead tr:first-child th, .table caption + thead tr:first-child td, .copy-text table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
-table colgroup + thead tr:first-child th,
+.copy-text table colgroup + thead tr:first-child th,
 .table colgroup + thead tr:first-child td,
-table colgroup + thead tr:first-child td,
+.copy-text table colgroup + thead tr:first-child td,
 .table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child th,
+.copy-text table thead:first-child tr:first-child th,
 .table thead:first-child tr:first-child td,
-table thead:first-child tr:first-child td {
+.copy-text table thead:first-child tr:first-child td {
   border-top: 0;
 }
 /* line 50, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table tbody + tbody, table tbody + tbody {
+.table tbody + tbody, .copy-text table tbody + tbody {
   border-top: 2px solid #dddddd;
 }
 /* line 55, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table .table, table .table, .table table, table table {
-  background-color: #eeeddf;
+.table .table, .copy-text table .table, .table .copy-text table, .copy-text .table table, .copy-text table table {
+  background-color: #5c5c5c;
 }
 
 /* line 69, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
@@ -1896,48 +1896,48 @@ table th[class*="col-"] {
 }
 
 /* line 166, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-.table > thead > tr > td.active, table > thead > tr > td.active,
+.table > thead > tr > td.active, .copy-text table > thead > tr > td.active,
 .table > thead > tr > th.active,
-table > thead > tr > th.active, .table > thead > tr.active > td, table > thead > tr.active > td, .table > thead > tr.active > th, table > thead > tr.active > th,
+.copy-text table > thead > tr > th.active, .table > thead > tr.active > td, .copy-text table > thead > tr.active > td, .table > thead > tr.active > th, .copy-text table > thead > tr.active > th,
 .table > tbody > tr > td.active,
-table > tbody > tr > td.active,
+.copy-text table > tbody > tr > td.active,
 .table > tbody > tr > th.active,
-table > tbody > tr > th.active,
+.copy-text table > tbody > tr > th.active,
 .table > tbody > tr.active > td,
-table > tbody > tr.active > td,
+.copy-text table > tbody > tr.active > td,
 .table > tbody > tr.active > th,
-table > tbody > tr.active > th,
+.copy-text table > tbody > tr.active > th,
 .table > tfoot > tr > td.active,
-table > tfoot > tr > td.active,
+.copy-text table > tfoot > tr > td.active,
 .table > tfoot > tr > th.active,
-table > tfoot > tr > th.active,
+.copy-text table > tfoot > tr > th.active,
 .table > tfoot > tr.active > td,
-table > tfoot > tr.active > td,
+.copy-text table > tfoot > tr.active > td,
 .table > tfoot > tr.active > th,
-table > tfoot > tr.active > th {
+.copy-text table > tfoot > tr.active > th {
   background-color: whitesmoke;
 }
 
 /* line 383, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-.table > thead > tr > td.state, table > thead > tr > td.state,
+.table > thead > tr > td.state, .copy-text table > thead > tr > td.state,
 .table > thead > tr > th.state,
-table > thead > tr > th.state, .table > thead > tr.state > td, table > thead > tr.state > td, .table > thead > tr.state > th, table > thead > tr.state > th,
+.copy-text table > thead > tr > th.state, .table > thead > tr.state > td, .copy-text table > thead > tr.state > td, .table > thead > tr.state > th, .copy-text table > thead > tr.state > th,
 .table > tbody > tr > td.state,
-table > tbody > tr > td.state,
+.copy-text table > tbody > tr > td.state,
 .table > tbody > tr > th.state,
-table > tbody > tr > th.state,
+.copy-text table > tbody > tr > th.state,
 .table > tbody > tr.state > td,
-table > tbody > tr.state > td,
+.copy-text table > tbody > tr.state > td,
 .table > tbody > tr.state > th,
-table > tbody > tr.state > th,
+.copy-text table > tbody > tr.state > th,
 .table > tfoot > tr > td.state,
-table > tfoot > tr > td.state,
+.copy-text table > tfoot > tr > td.state,
 .table > tfoot > tr > th.state,
-table > tfoot > tr > th.state,
+.copy-text table > tfoot > tr > th.state,
 .table > tfoot > tr.state > td,
-table > tfoot > tr.state > td,
+.copy-text table > tfoot > tr.state > td,
 .table > tfoot > tr.state > th,
-table > tfoot > tr.state > th {
+.copy-text table > tfoot > tr.state > th {
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
@@ -1950,25 +1950,25 @@ table > tfoot > tr.state > th {
 }
 
 /* line 383, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-.table > thead > tr > td.state, table > thead > tr > td.state,
+.table > thead > tr > td.state, .copy-text table > thead > tr > td.state,
 .table > thead > tr > th.state,
-table > thead > tr > th.state, .table > thead > tr.state > td, table > thead > tr.state > td, .table > thead > tr.state > th, table > thead > tr.state > th,
+.copy-text table > thead > tr > th.state, .table > thead > tr.state > td, .copy-text table > thead > tr.state > td, .table > thead > tr.state > th, .copy-text table > thead > tr.state > th,
 .table > tbody > tr > td.state,
-table > tbody > tr > td.state,
+.copy-text table > tbody > tr > td.state,
 .table > tbody > tr > th.state,
-table > tbody > tr > th.state,
+.copy-text table > tbody > tr > th.state,
 .table > tbody > tr.state > td,
-table > tbody > tr.state > td,
+.copy-text table > tbody > tr.state > td,
 .table > tbody > tr.state > th,
-table > tbody > tr.state > th,
+.copy-text table > tbody > tr.state > th,
 .table > tfoot > tr > td.state,
-table > tfoot > tr > td.state,
+.copy-text table > tfoot > tr > td.state,
 .table > tfoot > tr > th.state,
-table > tfoot > tr > th.state,
+.copy-text table > tfoot > tr > th.state,
 .table > tfoot > tr.state > td,
-table > tfoot > tr.state > td,
+.copy-text table > tfoot > tr.state > td,
 .table > tfoot > tr.state > th,
-table > tfoot > tr.state > th {
+.copy-text table > tfoot > tr.state > th {
   background-color: #f2dede;
   border-color: #eed3d7;
 }
@@ -1981,25 +1981,25 @@ table > tfoot > tr.state > th {
 }
 
 /* line 383, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-.table > thead > tr > td.state, table > thead > tr > td.state,
+.table > thead > tr > td.state, .copy-text table > thead > tr > td.state,
 .table > thead > tr > th.state,
-table > thead > tr > th.state, .table > thead > tr.state > td, table > thead > tr.state > td, .table > thead > tr.state > th, table > thead > tr.state > th,
+.copy-text table > thead > tr > th.state, .table > thead > tr.state > td, .copy-text table > thead > tr.state > td, .table > thead > tr.state > th, .copy-text table > thead > tr.state > th,
 .table > tbody > tr > td.state,
-table > tbody > tr > td.state,
+.copy-text table > tbody > tr > td.state,
 .table > tbody > tr > th.state,
-table > tbody > tr > th.state,
+.copy-text table > tbody > tr > th.state,
 .table > tbody > tr.state > td,
-table > tbody > tr.state > td,
+.copy-text table > tbody > tr.state > td,
 .table > tbody > tr.state > th,
-table > tbody > tr.state > th,
+.copy-text table > tbody > tr.state > th,
 .table > tfoot > tr > td.state,
-table > tfoot > tr > td.state,
+.copy-text table > tfoot > tr > td.state,
 .table > tfoot > tr > th.state,
-table > tfoot > tr > th.state,
+.copy-text table > tfoot > tr > th.state,
 .table > tfoot > tr.state > td,
-table > tfoot > tr.state > td,
+.copy-text table > tfoot > tr.state > td,
 .table > tfoot > tr.state > th,
-table > tfoot > tr.state > th {
+.copy-text table > tfoot > tr.state > th {
   background-color: #fcf8e3;
   border-color: #fbeed5;
 }
@@ -2021,22 +2021,22 @@ table > tfoot > tr.state > th {
     border: 1px solid #dddddd;
   }
   /* line 192, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-  .table-responsive > .table, .table-responsive > table {
+  .table-responsive > .table, .copy-text .table-responsive > table {
     margin-bottom: 0;
     background-color: #fff;
   }
   /* line 202, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
-  .table-responsive > .table > thead > tr > th, .table-responsive > table > thead > tr > th,
+  .table-responsive > .table > thead > tr > th, .copy-text .table-responsive > table > thead > tr > th,
   .table-responsive > .table > thead > tr > td,
-  .table-responsive > table > thead > tr > td,
+  .copy-text .table-responsive > table > thead > tr > td,
   .table-responsive > .table > tbody > tr > th,
-  .table-responsive > table > tbody > tr > th,
+  .copy-text .table-responsive > table > tbody > tr > th,
   .table-responsive > .table > tbody > tr > td,
-  .table-responsive > table > tbody > tr > td,
+  .copy-text .table-responsive > table > tbody > tr > td,
   .table-responsive > .table > tfoot > tr > th,
-  .table-responsive > table > tfoot > tr > th,
+  .copy-text .table-responsive > table > tfoot > tr > th,
   .table-responsive > .table > tfoot > tr > td,
-  .table-responsive > table > tfoot > tr > td {
+  .copy-text .table-responsive > table > tfoot > tr > td {
     white-space: nowrap;
   }
   /* line 210, ../../app/assets/stylesheets/bootstrap-3.0.0/_tables.scss */
@@ -2406,7 +2406,7 @@ textarea.input-lg, .input-group-lg > textarea.form-control,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -2765,7 +2765,7 @@ fieldset[disabled] .btn-info.active {
 
 /* line 78, ../../app/assets/stylesheets/bootstrap-3.0.0/_buttons.scss */
 .btn-link {
-  color: #95c11f;
+  color: white;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -2782,7 +2782,7 @@ fieldset[disabled] .btn-info.active {
 }
 /* line 98, ../../app/assets/stylesheets/bootstrap-3.0.0/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
-  color: #b0de35;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4475,7 +4475,7 @@ input[type="button"].btn-block {
 /* line 48, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #95c11f;
+  border-color: white;
 }
 /* line 55, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav .nav-divider {
@@ -4508,7 +4508,7 @@ input[type="button"].btn-block {
 /* line 125, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #555555;
-  background-color: #eeeddf;
+  background-color: #5c5c5c;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -4540,7 +4540,7 @@ input[type="button"].btn-block {
 }
 /* line 93, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav-tabs.nav-justified > .active > a {
-  border-bottom-color: #eeeddf;
+  border-bottom-color: #5c5c5c;
 }
 
 /* line 145, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
@@ -4617,14 +4617,14 @@ input[type="button"].btn-block {
 
 /* line 208, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav .caret {
-  border-top-color: #95c11f;
-  border-bottom-color: #95c11f;
+  border-top-color: white;
+  border-bottom-color: white;
 }
 
 /* line 212, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
 .nav a:hover .caret {
-  border-top-color: #b0de35;
-  border-bottom-color: #b0de35;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* line 218, ../../app/assets/stylesheets/bootstrap-3.0.0/_navs.scss */
@@ -4638,8 +4638,8 @@ input[type="button"].btn-block {
 .navbar {
   position: relative;
   z-index: 1000;
-  min-height: 50px;
-  margin-bottom: 22px;
+  min-height: 93px;
+  margin-bottom: 0;
   border: 1px solid transparent;
 }
 /* line 21, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
@@ -4792,7 +4792,7 @@ input[type="button"].btn-block {
 /* line 150, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 14px 15px;
+  padding: 35.5px 15px;
   font-size: 20px;
   line-height: 22px;
 }
@@ -4813,8 +4813,8 @@ input[type="button"].btn-block {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 29.5px;
+  margin-bottom: 29.5px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0;
@@ -4839,7 +4839,7 @@ input[type="button"].btn-block {
 
 /* line 205, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-nav {
-  margin: -8px;
+  margin: 2.75px;
 }
 /* line 208, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-nav > li > a {
@@ -4884,8 +4884,8 @@ input[type="button"].btn-block {
   }
   /* line 245, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-nav > li > a {
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 35.5px;
+    padding-bottom: 35.5px;
   }
 }
 
@@ -4909,8 +4909,8 @@ input[type="button"].btn-block {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 28.5px;
+  margin-bottom: 28.5px;
 }
 @media (min-width: 768px) {
   /* line 289, ../../app/assets/stylesheets/bootstrap-3.0.0/_forms.scss */
@@ -4980,15 +4980,15 @@ input[type="button"].btn-block {
 
 /* line 330, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-btn {
-  margin-top: 7px;
-  margin-bottom: 7px;
+  margin-top: 28.5px;
+  margin-bottom: 28.5px;
 }
 
 /* line 339, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-text {
   float: left;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 35.5px;
+  margin-bottom: 35.5px;
 }
 @media (min-width: 768px) {
   /* line 339, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
@@ -5127,12 +5127,12 @@ input[type="button"].btn-block {
 }
 /* line 511, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-  color: black;
+  color: #95c11f;
   background-color: transparent;
 }
 /* line 519, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: black;
+  color: #95c11f;
   background-color: transparent;
 }
 /* line 527, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
@@ -5160,12 +5160,12 @@ input[type="button"].btn-block {
 /* line 556, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   background-color: transparent;
-  color: black;
+  color: #95c11f;
 }
 /* line 561, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
-  border-top-color: black;
-  border-bottom-color: black;
+  border-top-color: #95c11f;
+  border-bottom-color: #95c11f;
 }
 /* line 565, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
@@ -5174,8 +5174,8 @@ input[type="button"].btn-block {
 }
 /* line 573, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-nav > .open > a .caret, .navbar-inverse .navbar-nav > .open > a:hover .caret, .navbar-inverse .navbar-nav > .open > a:focus .caret {
-  border-top-color: black;
-  border-bottom-color: black;
+  border-top-color: #95c11f;
+  border-bottom-color: #95c11f;
 }
 @media (max-width: 767px) {
   /* line 583, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
@@ -5188,12 +5188,12 @@ input[type="button"].btn-block {
   }
   /* line 589, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: black;
+    color: #95c11f;
     background-color: transparent;
   }
   /* line 597, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: black;
+    color: #95c11f;
     background-color: transparent;
   }
   /* line 605, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
@@ -5208,7 +5208,7 @@ input[type="button"].btn-block {
 }
 /* line 616, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-inverse .navbar-link:hover {
-  color: black;
+  color: #95c11f;
 }
 
 /* line 6, ../../app/assets/stylesheets/bootstrap-3.0.0/_breadcrumbs.scss */
@@ -5507,7 +5507,7 @@ a.badge:hover, a.badge:focus {
 /* line 45, ../../app/assets/stylesheets/bootstrap-3.0.0/_badges.scss */
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #95c11f;
+  color: white;
   background-color: white;
 }
 
@@ -5570,7 +5570,7 @@ a.list-group-item.active > .badge,
 /* line 19, ../../app/assets/stylesheets/bootstrap-3.0.0/_thumbnails.scss */
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #95c11f;
+  border-color: white;
 }
 
 /* line 24, ../../app/assets/stylesheets/bootstrap-3.0.0/_thumbnails.scss */
@@ -5582,7 +5582,7 @@ a.thumbnail:focus {
 /* line 28, ../../app/assets/stylesheets/bootstrap-3.0.0/_thumbnails.scss */
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: white;
 }
 
 /* line 9, ../../app/assets/stylesheets/bootstrap-3.0.0/_alerts.scss */
@@ -5992,11 +5992,11 @@ a.list-group-item:hover, a.list-group-item:focus {
 }
 
 /* line 59, ../../app/assets/stylesheets/bootstrap-3.0.0/_panels.scss */
-.panel > .table, .panel > table {
+.panel > .table, .copy-text .panel > table {
   margin-bottom: 0;
 }
 /* line 62, ../../app/assets/stylesheets/bootstrap-3.0.0/_panels.scss */
-.panel > .panel-body + .table, .panel > .panel-body + table {
+.panel > .panel-body + .table, .copy-text .panel > .panel-body + table {
   border-top: 1px solid #dddddd;
 }
 
@@ -6204,14 +6204,14 @@ a.list-group-item:hover, a.list-group-item:focus {
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
-  color: black;
-  text-shadow: 0 1px 0 white;
+  color: white;
+  text-shadow: 0 1px 0 black;
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
 /* line 16, ../../app/assets/stylesheets/bootstrap-3.0.0/_close.scss */
 .close:hover, .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
@@ -6280,7 +6280,7 @@ body.modal-open,
 /* line 52, ../../app/assets/stylesheets/bootstrap-3.0.0/_modals.scss */
 .modal-content {
   position: relative;
-  background-color: white;
+  background-color: #5c5c5c;
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0;
@@ -6314,7 +6314,7 @@ body.modal-open,
 /* line 80, ../../app/assets/stylesheets/bootstrap-3.0.0/_modals.scss */
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #5c5c5c;
   min-height: 16.42857px;
 }
 
@@ -6340,7 +6340,7 @@ body.modal-open,
   margin-top: 15px;
   padding: 19px 20px 20px;
   text-align: right;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #5c5c5c;
 }
 /* line 21, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
 .modal-footer:before, .modal-footer:after {
@@ -7595,24 +7595,17 @@ td.visible-print {
   }
 
   /* line 517, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-  .hidden-print, .navbar,
-  #footer,
-  #sidebar,
-  form {
+  .hidden-print, .navbar, #footer, #sidebar, form {
     display: none !important;
   }
 
   /* line 520, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-  tr.hidden-print, tr.navbar,
-  tr#footer,
-  tr#sidebar {
+  tr.hidden-print, tr.navbar, tr#footer, tr#sidebar {
     display: none !important;
   }
 
   /* line 522, ../../app/assets/stylesheets/bootstrap-3.0.0/_mixins.scss */
-  th.hidden-print, th.navbar,
-  th#footer,
-  th#sidebar,
+  th.hidden-print, th.navbar, th#footer, th#sidebar,
   td.hidden-print,
   td.navbar,
   td#footer,
@@ -9944,62 +9937,47 @@ a .icon-flip-vertical:before {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-/* line 7, ../../app/assets/stylesheets/_navbar.scss */
+/* line 5, ../../app/assets/stylesheets/_navbar.scss */
 .navbar {
   position: absolute;
   top: auto;
   left: 0;
   right: 0;
   bottom: 0;
-  margin-bottom: 0;
-  border-top: 6px solid #E73339;
 }
 @media (min-width: 768px) {
-  /* line 7, ../../app/assets/stylesheets/_navbar.scss */
-  .navbar {
-    min-height: 44px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-  }
-  /* line 19, ../../app/assets/stylesheets/_navbar.scss */
+  /* line 13, ../../app/assets/stylesheets/_navbar.scss */
   .navbar .navbar-nav {
     float: right !important;
   }
 }
 
-/* line 25, ../../app/assets/stylesheets/_navbar.scss */
+/* line 19, ../../app/assets/stylesheets/_navbar.scss */
 .navbar.fixed {
   position: fixed;
   top: 0;
   bottom: auto;
-  background-color: #222;
 }
 
-/* line 33, ../../app/assets/stylesheets/_navbar.scss */
+/* line 27, ../../app/assets/stylesheets/_navbar.scss */
 .navbar-nav > li > a {
+  font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-@media (min-width: 768px) {
-  /* line 32, ../../app/assets/stylesheets/_navbar.scss */
-  .navbar-nav {
-    margin-top: 5.5px;
-    margin-bottom: 5.5px;
-  }
-}
 
-/* line 45, ../../app/assets/stylesheets/_navbar.scss */
+/* line 36, ../../app/assets/stylesheets/_navbar.scss */
 .navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 /* CUSTOMIZE THE LANGUAGE MENU
 -------------------------------------------------- */
-/* line 52, ../../app/assets/stylesheets/_navbar.scss */
+/* line 43, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu {
   position: fixed;
   z-index: 1031;
@@ -10008,11 +9986,11 @@ a .icon-flip-vertical:before {
   top: 0;
   border-top: 4px solid #95c11f;
 }
-/* line 59, ../../app/assets/stylesheets/_navbar.scss */
+/* line 50, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu .nav {
   float: right;
 }
-/* line 62, ../../app/assets/stylesheets/_navbar.scss */
+/* line 53, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu .nav > li > a {
   background-color: #95c11f;
   color: #fff;
@@ -10023,7 +10001,7 @@ a .icon-flip-vertical:before {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 71, ../../app/assets/stylesheets/_navbar.scss */
+/* line 62, ../../app/assets/stylesheets/_navbar.scss */
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: #b0de35;
   color: white;
@@ -10031,33 +10009,38 @@ a .icon-flip-vertical:before {
 
 /* COPYRIGHT
 -------------------------------------------------- */
-/* line 3, ../../app/assets/stylesheets/_footer.scss */
-#copyright {
+/* line 4, ../../app/assets/stylesheets/_footer.scss */
+#copyright .container {
   padding-top: 22px;
   padding-bottom: 22px;
 }
-/* line 10, ../../app/assets/stylesheets/_footer.scss */
+/* line 8, ../../app/assets/stylesheets/_footer.scss */
 #copyright p {
   color: #989898;
   font-size: 11px;
   margin-bottom: 0;
 }
-
-/* line 17, ../../app/assets/stylesheets/_footer.scss */
-.nav-menu-legal > li {
+/* line 14, ../../app/assets/stylesheets/_footer.scss */
+#copyright .nav > li {
   float: left;
   margin-right: 15px;
 }
-/* line 21, ../../app/assets/stylesheets/_footer.scss */
-.nav-menu-legal > li > a {
+/* line 18, ../../app/assets/stylesheets/_footer.scss */
+#copyright .nav > li > a {
   color: #989898;
   font-size: 11px;
   padding: 0;
 }
-/* line 25, ../../app/assets/stylesheets/_footer.scss */
-.nav-menu-legal > li > a:hover {
-  color: black;
+/* line 22, ../../app/assets/stylesheets/_footer.scss */
+#copyright .nav > li > a:hover {
+  color: #95c11f;
   background-color: transparent;
+}
+
+/* line 31, ../../app/assets/stylesheets/_footer.scss */
+.copyright-author {
+  background: transparent url(/assets/gko/logo_gecko_black.png) center left no-repeat;
+  padding-left: 28px;
 }
 
 /* CONTACT STYLES
@@ -10071,19 +10054,20 @@ a .icon-flip-vertical:before {
 /* line 7, ../../app/assets/stylesheets/_contact.scss */
 .contact-section .contact {
   text-align: center;
+  font-size: 12px;
 }
-/* line 9, ../../app/assets/stylesheets/_contact.scss */
+/* line 10, ../../app/assets/stylesheets/_contact.scss */
 .contact-section .contact a {
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 12, ../../app/assets/stylesheets/_contact.scss */
+/* line 14, ../../app/assets/stylesheets/_contact.scss */
 .contact-section .contact a:hover {
   text-decoration: none;
   color: #555555;
 }
-/* line 18, ../../app/assets/stylesheets/_contact.scss */
+/* line 20, ../../app/assets/stylesheets/_contact.scss */
 .contact-section #submit {
   background-color: #5C5C5C;
   text-transform: uppercase;
@@ -10093,19 +10077,19 @@ a .icon-flip-vertical:before {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 25, ../../app/assets/stylesheets/_contact.scss */
+/* line 27, ../../app/assets/stylesheets/_contact.scss */
 .contact-section #submit:hover {
   background-color: #555555;
 }
 
-/* line 30, ../../app/assets/stylesheets/_contact.scss */
+/* line 32, ../../app/assets/stylesheets/_contact.scss */
 .form-control {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 33, ../../app/assets/stylesheets/_contact.scss */
+/* line 35, ../../app/assets/stylesheets/_contact.scss */
 .form-control:focus {
   border-color: none;
   outline: 0;
@@ -10114,36 +10098,36 @@ a .icon-flip-vertical:before {
   background: #e6e6e6;
 }
 
-/* line 40, ../../app/assets/stylesheets/_contact.scss */
+/* line 42, ../../app/assets/stylesheets/_contact.scss */
 .form-group {
   position: relative;
 }
 
-/* line 43, ../../app/assets/stylesheets/_contact.scss */
+/* line 45, ../../app/assets/stylesheets/_contact.scss */
 input {
   font-weight: normal;
 }
 
-/* line 46, ../../app/assets/stylesheets/_contact.scss */
+/* line 48, ../../app/assets/stylesheets/_contact.scss */
 input[type="text"] {
   margin-bottom: 15px;
   height: 48px;
 }
 
-/* line 50, ../../app/assets/stylesheets/_contact.scss */
+/* line 52, ../../app/assets/stylesheets/_contact.scss */
 textarea.form-control {
   height: 144px;
   resize: none;
 }
 
-/* line 55, ../../app/assets/stylesheets/_contact.scss */
+/* line 57, ../../app/assets/stylesheets/_contact.scss */
 span.error, span.valid {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-/* line 60, ../../app/assets/stylesheets/_contact.scss */
+/* line 62, ../../app/assets/stylesheets/_contact.scss */
 span.error, span.valid {
   width: 44px;
   height: 44px;
@@ -10152,17 +10136,17 @@ span.error, span.valid {
   background-repeat: no-repeat;
 }
 
-/* line 67, ../../app/assets/stylesheets/_contact.scss */
+/* line 69, ../../app/assets/stylesheets/_contact.scss */
 span.error {
   background-image: "/assets/notifications/error.svg";
 }
 
-/* line 70, ../../app/assets/stylesheets/_contact.scss */
+/* line 72, ../../app/assets/stylesheets/_contact.scss */
 span.valid {
   background-image: "/assets/notifications/valid.svg";
 }
 
-/* line 74, ../../app/assets/stylesheets/_contact.scss */
+/* line 76, ../../app/assets/stylesheets/_contact.scss */
 .alert {
   display: none;
   border: 0;
@@ -10171,7 +10155,7 @@ span.valid {
   color: #fff;
 }
 
-/* line 81, ../../app/assets/stylesheets/_contact.scss */
+/* line 83, ../../app/assets/stylesheets/_contact.scss */
 .alert-success {
   background-color: #22b573;
   color: #fff;
@@ -10233,6 +10217,15 @@ a:focus,
 }
 
 /* line 67, ../../app/assets/stylesheets/public.css.scss */
+.copy-text a {
+  text-decoration: underline;
+}
+
+/* PRINT UTILITIES
+-------------------------------------------------- */
+/* BACK-TO-TOP 
+-------------------------------------------------- */
+/* line 79, ../../app/assets/stylesheets/public.css.scss */
 #back-to-top {
   position: fixed;
   right: 20px;
@@ -10248,15 +10241,27 @@ a:focus,
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 81, ../../app/assets/stylesheets/public.css.scss */
+/* line 93, ../../app/assets/stylesheets/public.css.scss */
 #back-to-top:hover, #back-to-top:active {
   text-decoration: none;
   color: #95c11f;
 }
 
+/* CAROUSEL
+-------------------------------------------------- */
+/* line 101, ../../app/assets/stylesheets/public.css.scss */
+.carousel {
+  background-color: #fff;
+}
+
+/* line 104, ../../app/assets/stylesheets/public.css.scss */
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
 /* HEADER
 -------------------------------------------------- */
-/* line 89, ../../app/assets/stylesheets/public.css.scss */
+/* line 109, ../../app/assets/stylesheets/public.css.scss */
 html, body, #page-wrapper {
   width: 100%;
   height: 100%;
@@ -10267,20 +10272,25 @@ html, body, #page-wrapper {
   box-sizing: border-box;
 }
 
-/* line 97, ../../app/assets/stylesheets/public.css.scss */
+/* line 116, ../../app/assets/stylesheets/public.css.scss */
+body {
+  font-weight: 300;
+}
+
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
 #header {
   overflow: hidden;
   height: auto;
   background: url(/assets/bg.jpg) fixed no-repeat;
   height: 100%;
 }
-/* line 102, ../../app/assets/stylesheets/public.css.scss */
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
 #header h2 {
   color: #95c11f;
-  font-family: "Rock Salt", cursive;
+  font-family: "flood-std", cursive;
 }
 
-/* line 108, ../../app/assets/stylesheets/public.css.scss */
+/* line 130, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10289,37 +10299,24 @@ html, body, #page-wrapper {
   background-attachment: fixed;
 }
 
-/* line 116, ../../app/assets/stylesheets/public.css.scss */
+/* line 138, ../../app/assets/stylesheets/public.css.scss */
 #intro {
   max-width: 80%;
 }
 
-/* line 120, ../../app/assets/stylesheets/public.css.scss */
+/* line 142, ../../app/assets/stylesheets/public.css.scss */
 #logo {
   margin-bottom: 24px;
 }
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
-/* line 127, ../../app/assets/stylesheets/public.css.scss */
-.section-padding {
-  padding-top: 66px;
-  padding-bottom: 66px;
-}
-
-/* line 131, ../../app/assets/stylesheets/public.css.scss */
+/* line 148, ../../app/assets/stylesheets/public.css.scss */
 .section {
   position: relative;
 }
-
-/* line 134, ../../app/assets/stylesheets/public.css.scss */
-.page-title {
-  font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
-  text-transform: uppercase;
-}
-
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
-.section-caret {
+/* line 150, ../../app/assets/stylesheets/public.css.scss */
+.section .section-caret {
   width: 0;
   height: 0;
   border-top: 22px solid #E73339;
@@ -10333,85 +10330,126 @@ html, body, #page-wrapper {
   border-bottom: 0 dotted;
   content: "";
 }
-/* line 155, ../../app/assets/stylesheets/public.css.scss */
-.section-caret.section-caret-top {
+/* line 166, ../../app/assets/stylesheets/public.css.scss */
+.section .section-caret.section-caret-top {
   top: auto;
   bottom: -22px;
   border-top-color: #fff;
   border-bottom: 0 dotted;
 }
 
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
-.section-slogan h3 {
-  font-family: "Rock Salt", cursive;
-  letter-spacing: 2px;
-  font-size: 18px;
-  color: #000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+/* line 177, ../../app/assets/stylesheets/public.css.scss */
+.section-padding {
+  padding-top: 66px;
+  padding-bottom: 66px;
 }
 
-/* line 177, ../../app/assets/stylesheets/public.css.scss */
-.car-section .car-section-title,
-.car-section .car-section-description {
-  background-color: #E73339;
-  color: #fff;
-}
 /* line 181, ../../app/assets/stylesheets/public.css.scss */
-.car-section .car-section-images {
-  background-color: #fff;
+.page-title {
+  font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
+  text-transform: normal;
 }
+
 /* line 186, ../../app/assets/stylesheets/public.css.scss */
-.car-section:nth-child(even) .car-section-title,
-.car-section:nth-child(even) .car-section-description {
+.section-slogan h3 {
+  font-family: "flood-std", cursive;
+  color: #000;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+/* line 193, ../../app/assets/stylesheets/public.css.scss */
+.car-section {
   background-color: #f0652f;
 }
-/* line 190, ../../app/assets/stylesheets/public.css.scss */
-.car-section:nth-child(even) .section-caret {
+/* line 195, ../../app/assets/stylesheets/public.css.scss */
+.car-section .section-caret {
   border-top-color: #f0652f;
+}
+/* line 199, ../../app/assets/stylesheets/public.css.scss */
+.car-section:nth-child(even) {
+  background-color: #E73339;
+}
+/* line 201, ../../app/assets/stylesheets/public.css.scss */
+.car-section:nth-child(even) .section-caret {
+  border-top-color: #E73339;
+}
+
+/* line 207, ../../app/assets/stylesheets/public.css.scss */
+.btn-link {
+  color: #fff;
+  text-decoration: underline;
+  font-style: italic;
+}
+/* line 211, ../../app/assets/stylesheets/public.css.scss */
+.btn-link:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 197, ../../app/assets/stylesheets/public.css.scss */
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
 .description-section {
   background-color: #95c11f;
-  color: #fff;
 }
 
 /* SERVICES SECTION
 -------------------------------------------------- */
-/* line 203, ../../app/assets/stylesheets/public.css.scss */
+/* line 223, ../../app/assets/stylesheets/public.css.scss */
 .services-section {
   background-color: #89c4f4;
-  color: #fff;
+}
+
+/* line 226, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail {
+  text-align: center;
+}
+/* line 229, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail .caption h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 235, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail-icon {
+  width: 108px;
+  height: 108px;
+  border: 6px solid #cfe7fb;
+  margin: 0 auto;
+  background: #43a1ed url(/assets/web_icons.png) no-repeat left top;
+}
+
+/* line 242, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail-wrapper:nth-child(1) .thumbnail-icon {
+  background-position: 4px 0;
+}
+
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail-wrapper:nth-child(2) .thumbnail-icon {
+  background-position: -78px 0;
+}
+
+/* line 252, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail-wrapper:nth-child(3) .thumbnail-icon {
+  background-position: -164px 0;
+}
+
+/* line 257, ../../app/assets/stylesheets/public.css.scss */
+.thumbnail-wrapper:nth-child(4) .thumbnail-icon {
+  background-position: -250px 0;
 }
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 209, ../../app/assets/stylesheets/public.css.scss */
+/* line 263, ../../app/assets/stylesheets/public.css.scss */
 .streets-section {
   background-color: #5dc2a6;
-  color: #fff;
 }
 
 /* CONDITIONS SECTION
 -------------------------------------------------- */
-/* line 215, ../../app/assets/stylesheets/public.css.scss */
+/* line 268, ../../app/assets/stylesheets/public.css.scss */
 .conditions-section {
   background-color: #5C5C5C;
-  color: #fff;
 }
-
-/* line 223, ../../app/assets/stylesheets/public.css.scss */
-.carousel-inner > .item > img {
-  text-align: center;
-}
-
-/* line 226, ../../app/assets/stylesheets/public.css.scss */
-.carousel-inner > .item > img {
-  margin: 0 auto;
-}
-
-/* PRINT UTILITIES
--------------------------------------------------- */

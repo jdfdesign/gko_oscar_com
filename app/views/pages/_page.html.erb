@@ -5,8 +5,7 @@
     <div class="row">
       <div class="col-xs-12">
         <h2 class="page-title text-center"><%= record.title %></h2>
-      <hr>
-      <%= render_copy_text(record.body) %>
+        <%= render_copy_text(record.body, :class => "text-center") %>
       </div> 
     </div> 
   </div>
@@ -14,13 +13,14 @@
   <div id="services" class="container">
     <div class="row">
         <% record.children.in_menu.each do |p| %>
-        <div class="col-xs-6 col-sm-3">
-          <div class="thumbnail">
+        <div class="col-xs-6 col-sm-3 thumbnail-wrapper">
+          <figure class="thumbnail">
+            <div class="img-circle thumbnail-icon"></div>
             <div class="caption"> 
-              <h3><%= raw p.title %></h3>
+              <h4><%= raw p.title %></h4>
               <p><%= raw p.body %></p>
             </div>
-          </div>
+          </figure>
         </div> 
         <% end %>
     </div>

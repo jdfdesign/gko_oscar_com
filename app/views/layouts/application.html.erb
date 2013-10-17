@@ -17,21 +17,7 @@
     <section class="main-content">
       <%= yield %>
     </section>
-
-    <!-- START COPYRIGHT -->
-    <section id="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6 text-left">
-            <%= render_menu('legal') %>
-          </div>
-          <div class="col-xs-6 text-right">
-            <p>@ Copyright. All Rights Reserved. Created by <a href="http://www.oscar.com">Jouf Design.</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END COPYRIGHT -->
+    <%= render 'footer' %>
   </div>
 
   <!-- Back To Top -->

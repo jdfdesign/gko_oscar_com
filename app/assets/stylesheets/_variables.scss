@@ -1,5 +1,5 @@
-$font-family-cursive: 'Rock Salt', cursive;
-
+$font-family-cursive: 'flood-std', cursive;
+$th-brand-logo-height: 85px;
 //
 // Variables
 // --------------------------------------------------
@@ -63,14 +63,14 @@ $brand-info:            #5bc0de;
 // Scaffolding
 // -------------------------
 
-$body-bg:               #eeeddf;//#fff;
-$text-color:            $gray-dark;
+$body-bg:               #5c5c5c;//#fff;
+$text-color:            #fff;//$gray-dark;
 
 // Links
 // -------------------------
 
-$link-color:            $brand-primary;
-$link-hover-color:      lighten($link-color, 10%);//darken($link-color, 15%);
+$link-color:            $text-color;
+$link-hover-color:      #000;//darken($link-color, 15%);
 
 // Typography
 // -------------------------
@@ -231,8 +231,8 @@ $zindex-modal:             1050;
 // -------------------------
 
 // Basics of a navbar
-$navbar-height:                    50px;
-$navbar-margin-bottom:             $line-height-computed;
+$navbar-height:                    $th-brand-logo-height + 8px;
+$navbar-margin-bottom:             0;//$line-height-computed;
 $navbar-color:                     #fff;//#777;
 $navbar-bg:                        $brand-primary;//#dadad2;//#efeee9;//#2B3033;//#f8f8f8;
 $navbar-border:                    darken($navbar-bg, 6.5%);
@@ -268,7 +268,7 @@ $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 $navbar-inverse-link-color:                 #fff;//$gray-light;
-$navbar-inverse-link-hover-color:           #000;//#fff;
+$navbar-inverse-link-hover-color:           $brand-primary;//#fff;
 $navbar-inverse-link-hover-bg:              transparent;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color;
 $navbar-inverse-link-active-bg:             transparent;//darken($navbar-inverse-bg, 10%);
@@ -419,13 +419,13 @@ $modal-inner-padding:         20px;
 $modal-title-padding:         15px;
 $modal-title-line-height:     $line-height-base;
 
-$modal-content-bg:                             #fff;
+$modal-content-bg:                             #5c5c5c;//#fff;
 $modal-content-border-color:                   rgba(0,0,0,.2);
 $modal-content-fallback-border-color:          #999;
 
 $modal-backdrop-bg:           #000;
-$modal-header-border-color:   #e5e5e5;
-$modal-footer-border-color:   $modal-header-border-color;
+$modal-header-border-color:   #5c5c5c;//#e5e5e5;
+$modal-footer-border-color:   #5c5c5c;//$modal-header-border-color;
 
 
 // Alerts
@@ -510,8 +510,8 @@ $panel-info-heading-bg:       $state-info-bg;
 // Thumbnails
 // -------------------------
 $thumbnail-padding:           4px;
-$thumbnail-bg:                $body-bg;
-$thumbnail-border:            #ddd;
+$thumbnail-bg:                transparent;//$body-bg;
+$thumbnail-border:            none;//#ddd;
 $thumbnail-border-radius:     $border-radius-base;
 $thumbnail-caption-color:     $text-color;
 $thumbnail-caption-padding:   9px;
@@ -560,9 +560,9 @@ $carousel-caption-color:                      #fff;
 
 // Close
 // ------------------------
-$close-color:                 #000;
+$close-color:                 #fff;
 $close-font-weight:           bold;
-$close-text-shadow:           0 1px 0 #fff;
+$close-text-shadow:           0 1px 0 #000;
 
 
 // Code

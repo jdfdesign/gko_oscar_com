@@ -6,8 +6,10 @@
   background-color: $brand-primary;
   .contact {
     text-align: center;
+    font-size: 12px;
     a {
       color: #fff;
+      
       @include transition(all 0.4s ease-in-out);
       &:hover {
         text-decoration: none; 

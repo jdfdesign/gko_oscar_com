@@ -1,5 +1,3 @@
-$navbar-height-md: $line-height-computed * 2;
-$navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */ 
@@ -10,12 +8,8 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
   left: 0;
   right: 0;
   bottom: 0;
-  margin-bottom: 0;
-  border-top: 6px solid #E73339;
+  //margin-bottom: 0;
   @media (min-width: $grid-float-breakpoint) {
-    min-height: $navbar-height-md;
-    padding-top: $navbar-padding-vertical-md;
-    padding-bottom: $navbar-padding-vertical-md;
     .navbar-nav {
       @include pull-right;
     }
@@ -26,25 +20,22 @@ $navbar-padding-vertical-md: (($navbar-height-md - $line-height-computed) / 2);
   position: fixed;
   top: 0;
   bottom: auto;
-  background-color: #222;
 }
 
 .navbar-nav {
+ 
   > li > a {
+    font-family: $font-family-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 11px;
     @include transition(all 0.3s ease-in-out);
   }
-  @media (min-width: $grid-float-breakpoint) {
-    margin-top: ($navbar-padding-vertical-md / 2);
-    margin-bottom: ($navbar-padding-vertical-md / 2);
-  }
 }
 
 .navbar-brand {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: ($navbar-height - $th-brand-logo-height)/2;
+  padding-bottom: ($navbar-height - $th-brand-logo-height)/2;
 }
 
 /* CUSTOMIZE THE LANGUAGE MENU
