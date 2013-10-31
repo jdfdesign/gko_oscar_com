@@ -1,14 +1,17 @@
-<% if local_assigns.has_key? :record %> 
-<%= render_slideshow_for(record) %>  
-<article id="<%= dom_id(record) %>_page" class="section section-padding <%= record.name %>-section">
+<% if local_assigns.has_key? :record %>   
+<article id="<%= dom_id(record) %>_page" class="section section-padding <%= record.name %>-section" style="background-image: url('<%= record.thumbnail.thumbnail.black_and_white("1200x800#").url() if record.thumbnail %>');">
+  <div class="bg"></div>
   <div class="container"> 
     <div class="row">
       <div class="col-xs-12">
-        <h2 class="page-title text-center"><%= record.title %></h2>
+        <div class="page-header">
+          <h2 class="page-title text-center"><%= record.title %></h2>
+        </div>
         <%= render_copy_text(record.body, :class => "text-center") %>
       </div> 
     </div> 
-  </div> 
+  </div>
+    
 </article>
 <%= render 'google_map' %>
 <% end %>

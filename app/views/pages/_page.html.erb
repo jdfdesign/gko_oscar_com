@@ -4,8 +4,12 @@
   <div class="container"> 
     <div class="row">
       <div class="col-xs-12">
-        <h2 class="page-title text-center"><%= record.title %></h2>
-        <%= render_copy_text(record.body, :class => "text-center") %>
+        <div class="page-header">
+          <% if record.show_title_in_page -%>
+            <h2 class="page-title text-center"><%= record.title %></h2>
+            <% end -%>
+            <%= render_copy_text(record.body, :class => "text-center") %>
+          </div>
       </div> 
     </div> 
   </div>

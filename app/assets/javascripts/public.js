@@ -13,20 +13,29 @@ jQuery(function($){
   var THEME = window.THEME || {};
 
 
-  THEME.anim = function(){
+  THEME.anim = function(){ 
+    
+    var wrapper = $("#page-wrapper"),
+        header= $("#header"),
+        image_url = header.data("bg"),
+        intro = $("#intro"),
+        logo = $("#logo"),
+        intro_text = $("#intro-text");
+    
+    wrapper.hide();
+    intro.hide();
+    logo.hide();
+    intro_text.css('opacity', '0')     
     /* Starting Animation on Load */
-    $('<img/>').attr('src', 'images/background.jpg').load(function() {
-    	jQuery('#logo').fadeIn(600, function() {
-    		jQuery('h1').animate({opacity: '1', 'padding-top': '0'}, 500,function() {
-    			jQuery('.text').animate({opacity: '1', 'padding-top': '0'}, 500,function() {
-    				if(jQuery(window).width()<767){	
-    					jQuery('#explore').animate({opacity: '1', 'margin-top': '2em'}, 1000);
-    				} else {
-    					jQuery('#explore').animate({opacity: '1', 'margin-top': '4em'}, 1000);
-    				}
-    			});
-    		});
-    	});
+     $('<img/>').attr('src', image_url).load(function() { 
+       header.css("background-image", "url(" + image_url + ")");
+       wrapper.fadeIn(1200, function() {
+         THEME.textCenter(); 
+         intro.show();
+         logo.fadeIn(600, function() {
+           intro_text.animate({opacity:'1'}, 600) 
+         });
+       });
     });
   }
   THEME.textCenter = function(){
@@ -165,5 +174,4 @@ jQuery(function($){
     THEME.scrollToTop();
     THEME.placeholder();
   });
-
 }); 

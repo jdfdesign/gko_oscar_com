@@ -15,12 +15,12 @@ Author URI:         http://oscar.com
 
 /* IMPORTS
 -------------------------------------------------- */
-@import "variables"; 
+@import "theme/variables"; 
 @import "bootstrap-3.0.0/bootstrap";
 @import "font-awesome-3.2.1/font-awesome";
-@import "navbar";
-@import "footer";
-@import "contact";
+@import "theme/navbar";
+@import "theme/footer";
+@import "theme/contact";
 
 /* FIX FOR IE DEVICE_WIDTH BUG
 -------------------------------------------------- */
@@ -118,7 +118,8 @@ body {
 #header{
   overflow: hidden;
   height: auto;
-  background: image-url('bg.jpg') fixed no-repeat; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
   height: 100%;
   h2 {
     color:$brand-primary;
@@ -177,28 +178,41 @@ body {
   padding-top: $line-height-computed * 3;
   padding-bottom: $line-height-computed * 3;
 }
-.page-title {
- font-family: $font-family-serif;
- text-transform: normal; 
+
+.page-header {
+  margin-top: 0;
+  margin-bottom: $line-height-computed * 2;
+  border: none;
 }
+.car-section-title .page-header {
+  margin: 0;
+}
+.page-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $font-family-serif;
+  text-transform: normal; 
+  font-size: ceil($font-size-base * 1.50); // ~24px 
+}
+
 .section-slogan {
-  h3 {
-    font-family: $font-family-cursive;
-    color: #000;
-    @include opacity(.7);
-  }
+  font-family: $font-family-cursive;
+  color: #000;
+  font-size: floor($font-size-base * 2.60); // ~36px 
+  @include opacity(.7);
+  margin-bottom: 0;
 }
 
 .car-section { 
-  background-color: #f0652f;
+  background-color: #91278d;
   .section-caret {
-    border-top-color: #f0652f;
+    border-top-color: #91278d;
   }
   
   &:nth-child(even) {
-    background-color: #E73339;
+    background-color: #ed1d24;
     .section-caret {
-      border-top-color: #E73339;
+      border-top-color: #ed1d24;
     } 
   }
 }
@@ -216,11 +230,41 @@ body {
 -------------------------------------------------- */
 .description-section {
   background-color: $brand-primary;
+} 
+/* STREETS SECTION
+-------------------------------------------------- */
+.streets-section {
+  background-color: #5dc2a6;
+  overflow: hidden;
+  height: auto;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  position: relative;
+  .bg {
+     background-color: #5dc2a6;
+     @include opacity(.8);
+     top: 0;
+     bottom: 0; 
+     left: 0;
+     right: 0;
+     display: block;
+     position: absolute;
+     
+  }
 }
+
+.no-touch .streets-section{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /* SERVICES SECTION
 -------------------------------------------------- */
 .services-section {
-  background-color: #89c4f4;
+  background-color: darken(#89c4f4, 15%);
 }
 .thumbnail {
   text-align: center;
@@ -235,7 +279,7 @@ body {
   @include square(108px);
   border: 6px solid lighten(#89c4f4, 15%);
   margin: 0 auto;
-  background: darken(#89c4f4, 15%) image-url('web_icons.png') no-repeat left top;
+  background: #89c4f4 image-url('web_icons.png') no-repeat left top;
 }
 .thumbnail-wrapper:nth-child(1) {
   .thumbnail-icon {
@@ -257,11 +301,7 @@ body {
     background-position: -250px 0;
    }
 }
-/* STREETS SECTION
--------------------------------------------------- */
-.streets-section {
-  background-color: #5dc2a6;
-} 
+
 /* CONDITIONS SECTION
 -------------------------------------------------- */
 .conditions-section {

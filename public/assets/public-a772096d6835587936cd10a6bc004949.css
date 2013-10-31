@@ -5000,35 +5000,35 @@ input[type="button"].btn-block {
 
 /* line 353, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #95c11f;
+  border-color: #7fa41a;
 }
 /* line 357, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-brand {
-  color: #777777;
+  color: white;
 }
 /* line 360, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  color: #e6e6e6;
   background-color: transparent;
 }
 /* line 366, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-text {
-  color: #777777;
+  color: white;
 }
 /* line 371, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  color: white;
 }
 /* line 375, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  color: black;
   background-color: transparent;
 }
 /* line 383, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
-  background-color: #e7e7e7;
+  color: black;
+  background-color: transparent;
 }
 /* line 391, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -5050,43 +5050,43 @@ input[type="button"].btn-block {
 /* line 410, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e6e6e6;
+  border-color: #7da21a;
 }
 /* line 418, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
-  border-top-color: #333333;
-  border-bottom-color: #333333;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 /* line 427, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
-  color: #555555;
+  background-color: transparent;
+  color: black;
 }
 /* line 430, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .open > a .caret, .navbar-default .navbar-nav > .open > a:hover .caret, .navbar-default .navbar-nav > .open > a:focus .caret {
-  border-top-color: #555555;
-  border-bottom-color: #555555;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 /* line 436, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-nav > .dropdown > a .caret {
-  border-top-color: #777777;
-  border-bottom-color: #777777;
+  border-top-color: white;
+  border-bottom-color: white;
 }
 @media (max-width: 767px) {
   /* line 445, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    color: white;
   }
   /* line 448, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
+    color: black;
     background-color: transparent;
   }
   /* line 456, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
-    background-color: #e7e7e7;
+    color: black;
+    background-color: transparent;
   }
   /* line 464, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -5096,11 +5096,11 @@ input[type="button"].btn-block {
 }
 /* line 478, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-link {
-  color: #777777;
+  color: white;
 }
 /* line 480, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  color: black;
 }
 
 /* line 489, ../../app/assets/stylesheets/bootstrap-3.0.0/_navbar.scss */
@@ -9937,7 +9937,7 @@ a .icon-flip-vertical:before {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-/* line 5, ../../app/assets/stylesheets/_navbar.scss */
+/* line 5, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar {
   position: absolute;
   top: auto;
@@ -9946,20 +9946,20 @@ a .icon-flip-vertical:before {
   bottom: 0;
 }
 @media (min-width: 768px) {
-  /* line 13, ../../app/assets/stylesheets/_navbar.scss */
+  /* line 13, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar .navbar-nav {
     float: right !important;
   }
 }
 
-/* line 19, ../../app/assets/stylesheets/_navbar.scss */
+/* line 19, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar.fixed {
   position: fixed;
   top: 0;
   bottom: auto;
 }
 
-/* line 27, ../../app/assets/stylesheets/_navbar.scss */
+/* line 27, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li > a {
   font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
@@ -9969,7 +9969,7 @@ a .icon-flip-vertical:before {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 36, ../../app/assets/stylesheets/_navbar.scss */
+/* line 36, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -9977,7 +9977,7 @@ a .icon-flip-vertical:before {
 
 /* CUSTOMIZE THE LANGUAGE MENU
 -------------------------------------------------- */
-/* line 43, ../../app/assets/stylesheets/_navbar.scss */
+/* line 43, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu {
   position: fixed;
   z-index: 1031;
@@ -9986,22 +9986,22 @@ a .icon-flip-vertical:before {
   top: 0;
   border-top: 4px solid #95c11f;
 }
-/* line 50, ../../app/assets/stylesheets/_navbar.scss */
+/* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav {
   float: right;
 }
-/* line 53, ../../app/assets/stylesheets/_navbar.scss */
+/* line 53, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a {
   background-color: #95c11f;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 11px;
-  padding: 4px 20px;
+  padding: 4px 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 62, ../../app/assets/stylesheets/_navbar.scss */
+/* line 62, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: #b0de35;
   color: white;
@@ -10009,35 +10009,35 @@ a .icon-flip-vertical:before {
 
 /* COPYRIGHT
 -------------------------------------------------- */
-/* line 4, ../../app/assets/stylesheets/_footer.scss */
+/* line 4, ../../app/assets/stylesheets/theme/_footer.scss */
 #copyright .container {
   padding-top: 22px;
   padding-bottom: 22px;
 }
-/* line 8, ../../app/assets/stylesheets/_footer.scss */
+/* line 8, ../../app/assets/stylesheets/theme/_footer.scss */
 #copyright p {
   color: #989898;
   font-size: 11px;
   margin-bottom: 0;
 }
-/* line 14, ../../app/assets/stylesheets/_footer.scss */
+/* line 14, ../../app/assets/stylesheets/theme/_footer.scss */
 #copyright .nav > li {
   float: left;
   margin-right: 15px;
 }
-/* line 18, ../../app/assets/stylesheets/_footer.scss */
+/* line 18, ../../app/assets/stylesheets/theme/_footer.scss */
 #copyright .nav > li > a {
   color: #989898;
   font-size: 11px;
   padding: 0;
 }
-/* line 22, ../../app/assets/stylesheets/_footer.scss */
+/* line 22, ../../app/assets/stylesheets/theme/_footer.scss */
 #copyright .nav > li > a:hover {
   color: #95c11f;
   background-color: transparent;
 }
 
-/* line 31, ../../app/assets/stylesheets/_footer.scss */
+/* line 31, ../../app/assets/stylesheets/theme/_footer.scss */
 .copyright-author {
   background: transparent url(/assets/gko/logo_gecko_black-54320c6a6ed72638b09842e1dcc8e9f4.png) center left no-repeat;
   padding-left: 28px;
@@ -10045,29 +10045,29 @@ a .icon-flip-vertical:before {
 
 /* CONTACT STYLES
 -------------------------------------------------- */
-/* line 3, ../../app/assets/stylesheets/_contact.scss */
+/* line 3, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section {
   padding-top: 66px;
   padding-bottom: 66px;
   background-color: #95c11f;
 }
-/* line 7, ../../app/assets/stylesheets/_contact.scss */
+/* line 7, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section .contact {
   text-align: center;
   font-size: 12px;
 }
-/* line 10, ../../app/assets/stylesheets/_contact.scss */
+/* line 10, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section .contact a {
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 14, ../../app/assets/stylesheets/_contact.scss */
+/* line 14, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section .contact a:hover {
   text-decoration: none;
   color: #555555;
 }
-/* line 20, ../../app/assets/stylesheets/_contact.scss */
+/* line 20, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section #submit {
   background-color: #5C5C5C;
   text-transform: uppercase;
@@ -10077,19 +10077,19 @@ a .icon-flip-vertical:before {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 27, ../../app/assets/stylesheets/_contact.scss */
+/* line 27, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section #submit:hover {
   background-color: #555555;
 }
 
-/* line 32, ../../app/assets/stylesheets/_contact.scss */
+/* line 32, ../../app/assets/stylesheets/theme/_contact.scss */
 .form-control {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-/* line 35, ../../app/assets/stylesheets/_contact.scss */
+/* line 35, ../../app/assets/stylesheets/theme/_contact.scss */
 .form-control:focus {
   border-color: none;
   outline: 0;
@@ -10098,36 +10098,36 @@ a .icon-flip-vertical:before {
   background: #e6e6e6;
 }
 
-/* line 42, ../../app/assets/stylesheets/_contact.scss */
+/* line 42, ../../app/assets/stylesheets/theme/_contact.scss */
 .form-group {
   position: relative;
 }
 
-/* line 45, ../../app/assets/stylesheets/_contact.scss */
+/* line 45, ../../app/assets/stylesheets/theme/_contact.scss */
 input {
   font-weight: normal;
 }
 
-/* line 48, ../../app/assets/stylesheets/_contact.scss */
+/* line 48, ../../app/assets/stylesheets/theme/_contact.scss */
 input[type="text"] {
   margin-bottom: 15px;
   height: 48px;
 }
 
-/* line 52, ../../app/assets/stylesheets/_contact.scss */
+/* line 52, ../../app/assets/stylesheets/theme/_contact.scss */
 textarea.form-control {
   height: 144px;
   resize: none;
 }
 
-/* line 57, ../../app/assets/stylesheets/_contact.scss */
+/* line 57, ../../app/assets/stylesheets/theme/_contact.scss */
 span.error, span.valid {
   position: absolute;
   top: 0;
   right: 1em;
 }
 
-/* line 62, ../../app/assets/stylesheets/_contact.scss */
+/* line 62, ../../app/assets/stylesheets/theme/_contact.scss */
 span.error, span.valid {
   width: 44px;
   height: 44px;
@@ -10136,17 +10136,17 @@ span.error, span.valid {
   background-repeat: no-repeat;
 }
 
-/* line 69, ../../app/assets/stylesheets/_contact.scss */
+/* line 69, ../../app/assets/stylesheets/theme/_contact.scss */
 span.error {
   background-image: "/assets/notifications/error.svg";
 }
 
-/* line 72, ../../app/assets/stylesheets/_contact.scss */
+/* line 72, ../../app/assets/stylesheets/theme/_contact.scss */
 span.valid {
   background-image: "/assets/notifications/valid.svg";
 }
 
-/* line 76, ../../app/assets/stylesheets/_contact.scss */
+/* line 76, ../../app/assets/stylesheets/theme/_contact.scss */
 .alert {
   display: none;
   border: 0;
@@ -10155,7 +10155,7 @@ span.valid {
   color: #fff;
 }
 
-/* line 83, ../../app/assets/stylesheets/_contact.scss */
+/* line 83, ../../app/assets/stylesheets/theme/_contact.scss */
 .alert-success {
   background-color: #22b573;
   color: #fff;
@@ -10281,16 +10281,17 @@ body {
 #header {
   overflow: hidden;
   height: auto;
-  background: url(/assets/bg-d071d34875b03c1c9c2b7da38fdcc21f.jpg) fixed no-repeat;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
 }
-/* line 124, ../../app/assets/stylesheets/public.css.scss */
+/* line 125, ../../app/assets/stylesheets/public.css.scss */
 #header h2 {
   color: #95c11f;
   font-family: "flood-std", cursive;
 }
 
-/* line 130, ../../app/assets/stylesheets/public.css.scss */
+/* line 131, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10299,23 +10300,23 @@ body {
   background-attachment: fixed;
 }
 
-/* line 138, ../../app/assets/stylesheets/public.css.scss */
+/* line 139, ../../app/assets/stylesheets/public.css.scss */
 #intro {
   max-width: 80%;
 }
 
-/* line 142, ../../app/assets/stylesheets/public.css.scss */
+/* line 143, ../../app/assets/stylesheets/public.css.scss */
 #logo {
   margin-bottom: 24px;
 }
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
-/* line 148, ../../app/assets/stylesheets/public.css.scss */
+/* line 149, ../../app/assets/stylesheets/public.css.scss */
 .section {
   position: relative;
 }
-/* line 150, ../../app/assets/stylesheets/public.css.scss */
+/* line 151, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret {
   width: 0;
   height: 0;
@@ -10330,7 +10331,7 @@ body {
   border-bottom: 0 dotted;
   content: "";
 }
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
+/* line 167, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret.section-caret-top {
   top: auto;
   bottom: -22px;
@@ -10338,50 +10339,67 @@ body {
   border-bottom: 0 dotted;
 }
 
-/* line 177, ../../app/assets/stylesheets/public.css.scss */
+/* line 178, ../../app/assets/stylesheets/public.css.scss */
 .section-padding {
   padding-top: 66px;
   padding-bottom: 66px;
 }
 
-/* line 181, ../../app/assets/stylesheets/public.css.scss */
+/* line 183, ../../app/assets/stylesheets/public.css.scss */
+.page-header {
+  margin-top: 0;
+  margin-bottom: 44px;
+  border: none;
+}
+
+/* line 188, ../../app/assets/stylesheets/public.css.scss */
+.car-section-title .page-header {
+  margin: 0;
+}
+
+/* line 191, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
   text-transform: normal;
+  font-size: 24px;
 }
 
-/* line 186, ../../app/assets/stylesheets/public.css.scss */
-.section-slogan h3 {
+/* line 199, ../../app/assets/stylesheets/public.css.scss */
+.section-slogan {
   font-family: "flood-std", cursive;
   color: #000;
+  font-size: 41px;
   opacity: 0.7;
   filter: alpha(opacity=70);
-}
-
-/* line 193, ../../app/assets/stylesheets/public.css.scss */
-.car-section {
-  background-color: #f0652f;
-}
-/* line 195, ../../app/assets/stylesheets/public.css.scss */
-.car-section .section-caret {
-  border-top-color: #f0652f;
-}
-/* line 199, ../../app/assets/stylesheets/public.css.scss */
-.car-section:nth-child(even) {
-  background-color: #E73339;
-}
-/* line 201, ../../app/assets/stylesheets/public.css.scss */
-.car-section:nth-child(even) .section-caret {
-  border-top-color: #E73339;
+  margin-bottom: 0;
 }
 
 /* line 207, ../../app/assets/stylesheets/public.css.scss */
+.car-section {
+  background-color: #91278d;
+}
+/* line 209, ../../app/assets/stylesheets/public.css.scss */
+.car-section .section-caret {
+  border-top-color: #91278d;
+}
+/* line 213, ../../app/assets/stylesheets/public.css.scss */
+.car-section:nth-child(even) {
+  background-color: #ed1d24;
+}
+/* line 215, ../../app/assets/stylesheets/public.css.scss */
+.car-section:nth-child(even) .section-caret {
+  border-top-color: #ed1d24;
+}
+
+/* line 221, ../../app/assets/stylesheets/public.css.scss */
 .btn-link {
   color: #fff;
   text-decoration: underline;
   font-style: italic;
 }
-/* line 211, ../../app/assets/stylesheets/public.css.scss */
+/* line 225, ../../app/assets/stylesheets/public.css.scss */
 .btn-link:hover {
   color: #000;
   text-decoration: underline;
@@ -10389,67 +10407,93 @@ body {
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 218, ../../app/assets/stylesheets/public.css.scss */
+/* line 232, ../../app/assets/stylesheets/public.css.scss */
 .description-section {
   background-color: #95c11f;
 }
 
-/* SERVICES SECTION
+/* STREETS SECTION
 -------------------------------------------------- */
-/* line 223, ../../app/assets/stylesheets/public.css.scss */
-.services-section {
-  background-color: #89c4f4;
+/* line 237, ../../app/assets/stylesheets/public.css.scss */
+.streets-section {
+  background-color: #5dc2a6;
+  overflow: hidden;
+  height: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+/* line 244, ../../app/assets/stylesheets/public.css.scss */
+.streets-section .bg {
+  background-color: #5dc2a6;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
 }
 
-/* line 226, ../../app/assets/stylesheets/public.css.scss */
+/* line 257, ../../app/assets/stylesheets/public.css.scss */
+.no-touch .streets-section {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* SERVICES SECTION
+-------------------------------------------------- */
+/* line 267, ../../app/assets/stylesheets/public.css.scss */
+.services-section {
+  background-color: #43a1ed;
+}
+
+/* line 270, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail {
   text-align: center;
 }
-/* line 229, ../../app/assets/stylesheets/public.css.scss */
+/* line 273, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption h4 {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 235, ../../app/assets/stylesheets/public.css.scss */
+/* line 279, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-icon {
   width: 108px;
   height: 108px;
   border: 6px solid #cfe7fb;
   margin: 0 auto;
-  background: #43a1ed url(/assets/web_icons-0575dfa4612705577dc6d6d916f9c126.png) no-repeat left top;
+  background: #89c4f4 url(/assets/web_icons-0575dfa4612705577dc6d6d916f9c126.png) no-repeat left top;
 }
 
-/* line 242, ../../app/assets/stylesheets/public.css.scss */
+/* line 286, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(1) .thumbnail-icon {
   background-position: 4px 0;
 }
 
-/* line 247, ../../app/assets/stylesheets/public.css.scss */
+/* line 291, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(2) .thumbnail-icon {
   background-position: -78px 0;
 }
 
-/* line 252, ../../app/assets/stylesheets/public.css.scss */
+/* line 296, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(3) .thumbnail-icon {
   background-position: -164px 0;
 }
 
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(4) .thumbnail-icon {
   background-position: -250px 0;
 }
 
-/* STREETS SECTION
--------------------------------------------------- */
-/* line 263, ../../app/assets/stylesheets/public.css.scss */
-.streets-section {
-  background-color: #5dc2a6;
-}
-
 /* CONDITIONS SECTION
 -------------------------------------------------- */
-/* line 268, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .conditions-section {
   background-color: #5C5C5C;
 }
