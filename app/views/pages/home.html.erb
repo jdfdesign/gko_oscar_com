@@ -1,5 +1,16 @@
-<%# cache ['home', site, I18n.locale] do %>
+<% homepage = current_site.sections.find_by_name("primary_menu") %> 
+<% content_for :header do %>
+  <section id="header" class="section intro-section-title section-padding" data-bg="<%= homepage.thumbnail.thumbnail.black_and_white("1200x800#").url() if homepage.thumbnail %>">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div id="intro" class="text-container">
+          <%= image_tag("logo-green.png", :id => "logo") %>
+          <div id="intro-text"><%= raw resource.body %></div> 
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %> 
 <% resource.children.live.each do |p| %>
   <%= render((p.template.present? ? p.template : 'page'), :record => p) %>
-<% end %>
-<%# end %>
+<% end %> 

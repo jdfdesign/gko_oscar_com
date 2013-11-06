@@ -84,8 +84,8 @@ a:focus,
   margin: 0;
   width: 50px;
   height: 42px;
-  line-height: 42px;
-  background-color: #505050;
+  line-height: 52px;
+  background-color: #000;
   color: #fff;
   @include transition(all 0.4s ease-in-out);
   &:hover,
@@ -150,7 +150,7 @@ body {
   .section-caret {
     width: 0;
     height: 0;
-    border-top:   22px solid #E73339;
+    border-top:   22px solid #fff;
     border-right: 22px solid transparent;
     border-left:  22px solid transparent;
     position: absolute;
@@ -213,6 +213,9 @@ body {
     background-color: #ed1d24;
     .section-caret {
       border-top-color: #ed1d24;
+    }
+    .section-caret-top {
+      border-top-color: #fff;
     } 
   }
 }

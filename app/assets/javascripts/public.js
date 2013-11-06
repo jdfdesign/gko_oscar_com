@@ -129,6 +129,8 @@ jQuery(function($){
 
         e.preventDefault();
       })
+      
+      
     }
   /* ==================================================
     	Scroll to Top
@@ -173,5 +175,11 @@ jQuery(function($){
     THEME.navigation();
     THEME.scrollToTop();
     THEME.placeholder();
+    
+    $('.pipe a').attr("data-remote", "true");
+    
+    $( window ).resize(function() {
+      THEME.textCenter();
+    });
   });
 }); 

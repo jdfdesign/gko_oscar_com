@@ -9996,7 +9996,7 @@ a .icon-flip-vertical:before {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 11px;
+  font-size: 9px;
   padding: 4px 30px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -10005,6 +10005,15 @@ a .icon-flip-vertical:before {
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: #b0de35;
   color: white;
+}
+
+/* line 69, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar.fixed #locales-menu {
+  border-top-color: #000;
+}
+/* line 71, ../../app/assets/stylesheets/theme/_navbar.scss */
+.navbar.fixed #locales-menu .nav > li > a {
+  background-color: #000;
 }
 
 /* COPYRIGHT
@@ -10235,8 +10244,8 @@ a:focus,
   margin: 0;
   width: 50px;
   height: 42px;
-  line-height: 42px;
-  background-color: #505050;
+  line-height: 52px;
+  background-color: #000;
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -10320,7 +10329,7 @@ body {
 .section .section-caret {
   width: 0;
   height: 0;
-  border-top: 22px solid #E73339;
+  border-top: 22px solid #fff;
   border-right: 22px solid transparent;
   border-left: 22px solid transparent;
   position: absolute;
@@ -10392,14 +10401,18 @@ body {
 .car-section:nth-child(even) .section-caret {
   border-top-color: #ed1d24;
 }
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
+.car-section:nth-child(even) .section-caret-top {
+  border-top-color: #fff;
+}
 
-/* line 221, ../../app/assets/stylesheets/public.css.scss */
+/* line 224, ../../app/assets/stylesheets/public.css.scss */
 .btn-link {
   color: #fff;
   text-decoration: underline;
   font-style: italic;
 }
-/* line 225, ../../app/assets/stylesheets/public.css.scss */
+/* line 228, ../../app/assets/stylesheets/public.css.scss */
 .btn-link:hover {
   color: #000;
   text-decoration: underline;
@@ -10407,14 +10420,14 @@ body {
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 232, ../../app/assets/stylesheets/public.css.scss */
+/* line 235, ../../app/assets/stylesheets/public.css.scss */
 .description-section {
   background-color: #95c11f;
 }
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 237, ../../app/assets/stylesheets/public.css.scss */
+/* line 240, ../../app/assets/stylesheets/public.css.scss */
 .streets-section {
   background-color: #5dc2a6;
   overflow: hidden;
@@ -10423,7 +10436,7 @@ body {
   background-attachment: fixed;
   position: relative;
 }
-/* line 244, ../../app/assets/stylesheets/public.css.scss */
+/* line 247, ../../app/assets/stylesheets/public.css.scss */
 .streets-section .bg {
   background-color: #5dc2a6;
   opacity: 0.8;
@@ -10436,7 +10449,7 @@ body {
   position: absolute;
 }
 
-/* line 257, ../../app/assets/stylesheets/public.css.scss */
+/* line 260, ../../app/assets/stylesheets/public.css.scss */
 .no-touch .streets-section {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10447,22 +10460,22 @@ body {
 
 /* SERVICES SECTION
 -------------------------------------------------- */
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 270, ../../app/assets/stylesheets/public.css.scss */
 .services-section {
   background-color: #43a1ed;
 }
 
-/* line 270, ../../app/assets/stylesheets/public.css.scss */
+/* line 273, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail {
   text-align: center;
 }
-/* line 273, ../../app/assets/stylesheets/public.css.scss */
+/* line 276, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption h4 {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 279, ../../app/assets/stylesheets/public.css.scss */
+/* line 282, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-icon {
   width: 108px;
   height: 108px;
@@ -10471,29 +10484,29 @@ body {
   background: #89c4f4 url(/assets/web_icons.png) no-repeat left top;
 }
 
-/* line 286, ../../app/assets/stylesheets/public.css.scss */
+/* line 289, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(1) .thumbnail-icon {
   background-position: 4px 0;
 }
 
-/* line 291, ../../app/assets/stylesheets/public.css.scss */
+/* line 294, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(2) .thumbnail-icon {
   background-position: -78px 0;
 }
 
-/* line 296, ../../app/assets/stylesheets/public.css.scss */
+/* line 299, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(3) .thumbnail-icon {
   background-position: -164px 0;
 }
 
-/* line 301, ../../app/assets/stylesheets/public.css.scss */
+/* line 304, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(4) .thumbnail-icon {
   background-position: -250px 0;
 }
 
 /* CONDITIONS SECTION
 -------------------------------------------------- */
-/* line 308, ../../app/assets/stylesheets/public.css.scss */
+/* line 311, ../../app/assets/stylesheets/public.css.scss */
 .conditions-section {
   background-color: #5C5C5C;
 }
