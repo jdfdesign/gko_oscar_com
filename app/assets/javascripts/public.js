@@ -105,6 +105,7 @@ jQuery(function($){
     THEME.navigation = function() {
       
       var navbarHeight = $('.navbar').height();
+      
       $(window).bind('scroll', function () {
         var scrollTop = jQuery(window).scrollTop();
         scrollTop >= $(window).height() - navbarHeight ? $(".navbar").addClass("fixed") : $(".navbar").removeClass("fixed");
@@ -117,15 +118,20 @@ jQuery(function($){
         $(this).parent().find('li').removeClass('active');
         $(this).addClass('active');
 
-        if ($(window).width() <= 767) {
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top - navbarHeight
-          }, 1500, 'easeInOutExpo');
-        } else {
-          $('html, body').stop().animate({
-            scrollTop: target.offset().top - navbarHeight
-          }, 1500, 'easeInOutExpo');
-        }
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - navbarHeight
+        }, 1500, 'easeInOutExpo');
+
+
+        e.preventDefault();
+      })
+      
+      $('.anchor-link').on("click", function(e) {
+        var target = $($(this).attr('href'));
+
+        $('html, body').stop().animate({
+          scrollTop: target.offset().top - navbarHeight
+        }, 1500, 'easeInOutExpo');
 
         e.preventDefault();
       })
