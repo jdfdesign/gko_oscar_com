@@ -67,7 +67,7 @@ PATH
       filters_spam (~> 0.2)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
     actionmailer (3.2.14.rc2)
