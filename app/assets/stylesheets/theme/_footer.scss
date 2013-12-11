@@ -31,4 +31,9 @@
 .copyright-author {
  	background: transparent image-url('gko/logo_gecko_black.png') center left no-repeat;
  	padding-left: 28px;
+  color: #000;
+  &:hover {
+    color: $brand-primary;
+    text-decoration: none;
+  }
 }

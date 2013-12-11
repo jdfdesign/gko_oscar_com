@@ -10050,6 +10050,12 @@ a .icon-flip-vertical:before {
 .copyright-author {
   background: transparent url(/assets/gko/logo_gecko_black-54320c6a6ed72638b09842e1dcc8e9f4.png) center left no-repeat;
   padding-left: 28px;
+  color: #000;
+}
+/* line 35, ../../app/assets/stylesheets/theme/_footer.scss */
+.copyright-author:hover {
+  color: #95c11f;
+  text-decoration: none;
 }
 
 /* CONTACT STYLES
@@ -10088,7 +10094,7 @@ a .icon-flip-vertical:before {
 }
 /* line 27, ../../app/assets/stylesheets/theme/_contact.scss */
 .contact-section #submit:hover {
-  background-color: #555555;
+  background-color: #000;
 }
 
 /* line 32, ../../app/assets/stylesheets/theme/_contact.scss */
@@ -10256,21 +10262,38 @@ a:focus,
   color: #95c11f;
 }
 
+/* line 99, ../../app/assets/stylesheets/public.css.scss */
+#oscarpark-ad {
+  background-color: #F39200;
+  position: fixed;
+  right: -164px;
+  top: 133px;
+  z-index: 99;
+  width: 280px;
+  height: 82px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 108, ../../app/assets/stylesheets/public.css.scss */
+#oscarpark-ad:hover {
+  right: 0;
+}
+
 /* CAROUSEL
 -------------------------------------------------- */
-/* line 101, ../../app/assets/stylesheets/public.css.scss */
+/* line 116, ../../app/assets/stylesheets/public.css.scss */
 .carousel {
   background-color: #fff;
 }
 
-/* line 104, ../../app/assets/stylesheets/public.css.scss */
+/* line 119, ../../app/assets/stylesheets/public.css.scss */
 .carousel-inner > .item > img {
   margin: 0 auto;
 }
 
 /* HEADER
 -------------------------------------------------- */
-/* line 109, ../../app/assets/stylesheets/public.css.scss */
+/* line 124, ../../app/assets/stylesheets/public.css.scss */
 html, body, #page-wrapper {
   width: 100%;
   height: 100%;
@@ -10281,12 +10304,12 @@ html, body, #page-wrapper {
   box-sizing: border-box;
 }
 
-/* line 116, ../../app/assets/stylesheets/public.css.scss */
+/* line 131, ../../app/assets/stylesheets/public.css.scss */
 body {
   font-weight: 300;
 }
 
-/* line 119, ../../app/assets/stylesheets/public.css.scss */
+/* line 134, ../../app/assets/stylesheets/public.css.scss */
 #header {
   overflow: hidden;
   height: auto;
@@ -10294,13 +10317,13 @@ body {
   background-attachment: fixed;
   height: 100%;
 }
-/* line 125, ../../app/assets/stylesheets/public.css.scss */
+/* line 140, ../../app/assets/stylesheets/public.css.scss */
 #header h2 {
   color: #95c11f;
   font-family: "flood-std", cursive;
 }
 
-/* line 131, ../../app/assets/stylesheets/public.css.scss */
+/* line 146, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10309,23 +10332,23 @@ body {
   background-attachment: fixed;
 }
 
-/* line 139, ../../app/assets/stylesheets/public.css.scss */
+/* line 154, ../../app/assets/stylesheets/public.css.scss */
 #intro {
   max-width: 80%;
 }
 
-/* line 143, ../../app/assets/stylesheets/public.css.scss */
+/* line 158, ../../app/assets/stylesheets/public.css.scss */
 #logo {
   margin-bottom: 24px;
 }
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
-/* line 149, ../../app/assets/stylesheets/public.css.scss */
+/* line 164, ../../app/assets/stylesheets/public.css.scss */
 .section {
   position: relative;
 }
-/* line 151, ../../app/assets/stylesheets/public.css.scss */
+/* line 166, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret {
   width: 0;
   height: 0;
@@ -10340,7 +10363,7 @@ body {
   border-bottom: 0 dotted;
   content: "";
 }
-/* line 167, ../../app/assets/stylesheets/public.css.scss */
+/* line 182, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret.section-caret-top {
   top: auto;
   bottom: -22px;
@@ -10348,25 +10371,25 @@ body {
   border-bottom: 0 dotted;
 }
 
-/* line 178, ../../app/assets/stylesheets/public.css.scss */
+/* line 193, ../../app/assets/stylesheets/public.css.scss */
 .section-padding {
   padding-top: 66px;
   padding-bottom: 66px;
 }
 
-/* line 183, ../../app/assets/stylesheets/public.css.scss */
+/* line 198, ../../app/assets/stylesheets/public.css.scss */
 .page-header {
   margin-top: 0;
   margin-bottom: 44px;
   border: none;
 }
 
-/* line 188, ../../app/assets/stylesheets/public.css.scss */
+/* line 203, ../../app/assets/stylesheets/public.css.scss */
 .car-section-title .page-header {
   margin: 0;
 }
 
-/* line 191, ../../app/assets/stylesheets/public.css.scss */
+/* line 206, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -10375,7 +10398,7 @@ body {
   font-size: 24px;
 }
 
-/* line 199, ../../app/assets/stylesheets/public.css.scss */
+/* line 214, ../../app/assets/stylesheets/public.css.scss */
 .section-slogan {
   font-family: "flood-std", cursive;
   color: #000;
@@ -10385,34 +10408,34 @@ body {
   margin-bottom: 0;
 }
 
-/* line 207, ../../app/assets/stylesheets/public.css.scss */
+/* line 222, ../../app/assets/stylesheets/public.css.scss */
 .car-section {
   background-color: #91278d;
 }
-/* line 209, ../../app/assets/stylesheets/public.css.scss */
+/* line 224, ../../app/assets/stylesheets/public.css.scss */
 .car-section .section-caret {
   border-top-color: #91278d;
 }
-/* line 213, ../../app/assets/stylesheets/public.css.scss */
+/* line 228, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) {
   background-color: #ed1d24;
 }
-/* line 215, ../../app/assets/stylesheets/public.css.scss */
+/* line 230, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .section-caret {
   border-top-color: #ed1d24;
 }
-/* line 218, ../../app/assets/stylesheets/public.css.scss */
+/* line 233, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .section-caret-top {
   border-top-color: #fff;
 }
 
-/* line 224, ../../app/assets/stylesheets/public.css.scss */
+/* line 239, ../../app/assets/stylesheets/public.css.scss */
 .btn-link {
   color: #fff;
   text-decoration: underline;
   font-style: italic;
 }
-/* line 228, ../../app/assets/stylesheets/public.css.scss */
+/* line 243, ../../app/assets/stylesheets/public.css.scss */
 .btn-link:hover {
   color: #000;
   text-decoration: underline;
@@ -10420,14 +10443,14 @@ body {
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 235, ../../app/assets/stylesheets/public.css.scss */
+/* line 250, ../../app/assets/stylesheets/public.css.scss */
 .description-section {
   background-color: #95c11f;
 }
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 240, ../../app/assets/stylesheets/public.css.scss */
+/* line 255, ../../app/assets/stylesheets/public.css.scss */
 .streets-section {
   background-color: #5dc2a6;
   overflow: hidden;
@@ -10436,7 +10459,7 @@ body {
   background-attachment: fixed;
   position: relative;
 }
-/* line 247, ../../app/assets/stylesheets/public.css.scss */
+/* line 262, ../../app/assets/stylesheets/public.css.scss */
 .streets-section .bg {
   background-color: #5dc2a6;
   opacity: 0.8;
@@ -10449,7 +10472,7 @@ body {
   position: absolute;
 }
 
-/* line 260, ../../app/assets/stylesheets/public.css.scss */
+/* line 275, ../../app/assets/stylesheets/public.css.scss */
 .no-touch .streets-section {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10460,23 +10483,23 @@ body {
 
 /* SERVICES SECTION
 -------------------------------------------------- */
-/* line 270, ../../app/assets/stylesheets/public.css.scss */
+/* line 285, ../../app/assets/stylesheets/public.css.scss */
 .services-section {
   background-color: #43a1ed;
 }
 
-/* line 273, ../../app/assets/stylesheets/public.css.scss */
+/* line 288, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail {
   text-align: center;
 }
-/* line 276, ../../app/assets/stylesheets/public.css.scss */
+/* line 291, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption h4 {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-/* line 283, ../../app/assets/stylesheets/public.css.scss */
+/* line 298, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-icon {
   width: 108px;
   height: 108px;
@@ -10485,29 +10508,29 @@ body {
   background: #89c4f4 url(/assets/web_icons-0575dfa4612705577dc6d6d916f9c126.png) no-repeat left top;
 }
 
-/* line 290, ../../app/assets/stylesheets/public.css.scss */
+/* line 305, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(1) .thumbnail-icon {
   background-position: 4px 0;
 }
 
-/* line 295, ../../app/assets/stylesheets/public.css.scss */
+/* line 310, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(2) .thumbnail-icon {
   background-position: -78px 0;
 }
 
-/* line 300, ../../app/assets/stylesheets/public.css.scss */
+/* line 315, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(3) .thumbnail-icon {
   background-position: -164px 0;
 }
 
-/* line 305, ../../app/assets/stylesheets/public.css.scss */
+/* line 320, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(4) .thumbnail-icon {
   background-position: -250px 0;
 }
 
 /* CONDITIONS SECTION
 -------------------------------------------------- */
-/* line 312, ../../app/assets/stylesheets/public.css.scss */
+/* line 327, ../../app/assets/stylesheets/public.css.scss */
 .conditions-section {
   background-color: #5C5C5C;
 }

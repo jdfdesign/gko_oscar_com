@@ -25,7 +25,7 @@
      letter-spacing: 2px;
      @include transition(all 0.4s ease-in-out);
      &:hover {
-       background-color: $gray;
+       background-color: #000;
      }
   }
 }

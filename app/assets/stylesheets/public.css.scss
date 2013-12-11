@@ -95,6 +95,21 @@ a:focus,
   }
 }
 
+#oscarpark-ad {
+  background-color: #F39200;
+  position: fixed;
+  right: -164px;
+  top: $navbar-height + 40px;
+  z-index: 99;
+  width: 280px;
+  height: 82px;
+  @include transition(all 0.4s ease-in-out);
+  &:hover {
+    right: 0;
+  }
+}
+
+
 /* CAROUSEL
 -------------------------------------------------- */
 .carousel {
@@ -311,8 +326,6 @@ body {
 .conditions-section {
   background-color: #5C5C5C;
 }
-
-
 
 
  

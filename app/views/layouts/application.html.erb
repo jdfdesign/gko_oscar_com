@@ -10,7 +10,13 @@
     </section>
     <%= render 'footer' %>
   </div>
-
+  <!-- Oscar Park Ad -->
+  <div id="oscarpark-ad">
+    <%= link_to("http://oscarparkgustavia.com") do %>
+      <%= image_tag("logo_oscarpark_#{I18n.locale.to_s}.png") %>
+    <% end %>
+  </div>
+  <!-- End Oscar Park Ad -->
   <!-- Back To Top -->
   <a id="back-to-top" href="#" class="text-center">
   	<i class="icon-angle-up icon-2x"></i>
