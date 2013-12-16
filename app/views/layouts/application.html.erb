@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js">
 <%= render 'head' %>
-<body id='<%= @body_id %>'> 
+<body id='<%= @body_id %>'>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=453822864679063";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script> 
   <div id="page-wrapper">
     <%= yield :header %>
     <%= render "navbar" %>
@@ -12,7 +20,7 @@
   </div>
   <!-- Oscar Park Ad -->
   <div id="oscarpark-ad">
-    <%= link_to("http://oscarparkgustavia.com") do %>
+    <%= link_to("http://oscarparkgustavia.com", :target => "_blank") do %>
       <%= image_tag("logo_oscarpark_#{I18n.locale.to_s}.png") %>
     <% end %>
   </div>
