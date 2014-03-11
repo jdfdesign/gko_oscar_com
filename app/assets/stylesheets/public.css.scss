@@ -146,8 +146,11 @@ body {
   overflow: hidden;
   height: auto;
   background-repeat: no-repeat; 
-  background-attachment: fixed; 
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: scroll;
   height: 100%;
+  min-height: 420px;
   h2 {
     color:$brand-primary;
     font-family: $font-family-cursive;
@@ -159,7 +162,9 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
+  background-attachment: none;
 }
 
 #intro {
@@ -167,7 +172,10 @@ body {
 }
 
 #logo {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  @media (min-width: $grid-float-breakpoint) {
+    margin-bottom: 24px;
+  }
 }
 
 /* PAGE SECTIONS 

@@ -18,34 +18,29 @@ jQuery(function($){
     var wrapper = $("#page-wrapper"),
         header= $("#header"),
         image_url = header.data("bg"),
-        intro = $("#intro"),
+        intro = $("#header-intro"),
         logo = $("#logo"),
         intro_text = $("#intro-text");
-    
     wrapper.hide();
     intro.hide();
     logo.hide();
-    intro_text.css('opacity', '0')     
+    intro_text.hide();    
     /* Starting Animation on Load */
      $('<img/>').attr('src', image_url).load(function() { 
        header.css("background-image", "url(" + image_url + ")");
        wrapper.fadeIn(1200, function() {
-         THEME.textCenter(); 
          intro.show();
          logo.fadeIn(600, function() {
-           intro_text.animate({opacity:'1'}, 600) 
+           intro_text.fadeIn(600);
          });
        });
     });
   }
   THEME.textCenter = function(){
-    $('.text-container').css({
-      position:'absolute'
-    });
-
-    $('.text-container').css({
-      left: ($(window).width() - $('.text-container').outerWidth())/2,
-      top: ($(window).height() - ($('.navbar').outerHeight()*2) - $('.text-container').outerHeight())/2
+    $("#intro").css({
+      position:'absolute',
+      left: ($(window).width() - $("#header-intro").width())/2,
+      top: ($(window).height() - ($('.navbar').outerHeight()*2) - $("#header-intro").height())/2
     });
   }
 
@@ -122,7 +117,7 @@ jQuery(function($){
           scrollTop: target.offset().top - navbarHeight
         }, 1500, 'easeInOutExpo');
 
-
+        $(".navbar-collapse").collapse('hide');
         e.preventDefault();
       })
       

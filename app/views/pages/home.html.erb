@@ -1,11 +1,13 @@
 <% content_for :header do %>
   <section id="header" class="section intro-section-title section-padding" data-bg="<%= resource.thumbnail.thumbnail("1200x800#").url() if resource.thumbnail %>">
+    <div class="container">
     <div class="row">
-      <div class="col-xs-12 text-center">
-        <div id="intro" class="text-container">
-          <%= image_tag("logo-green.png", :id => "logo") %>
+      <div class="col-xs-12">
+        <div id="header-intro" class="text-center">
+          <%= image_tag("logo-green.png", :id => "logo") %><br/>
           <div id="intro-text"><%= raw resource.body %></div> 
         </div>
+      </div>
       </div>
     </div>
   </section>

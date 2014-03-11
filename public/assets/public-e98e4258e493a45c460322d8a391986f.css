@@ -9937,14 +9937,6 @@ a .icon-flip-vertical:before {
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-/* line 5, ../../app/assets/stylesheets/theme/_navbar.scss */
-.navbar {
-  position: absolute;
-  top: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
 @media (min-width: 768px) {
   /* line 13, ../../app/assets/stylesheets/theme/_navbar.scss */
   .navbar .navbar-nav {
@@ -9956,10 +9948,12 @@ a .icon-flip-vertical:before {
 .navbar.fixed {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   bottom: auto;
 }
 
-/* line 27, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 29, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-nav > li > a {
   font-family: "ltc-bodoni-175", Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
@@ -9969,7 +9963,7 @@ a .icon-flip-vertical:before {
   transition: all 0.3s ease-in-out;
 }
 
-/* line 36, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 38, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar-brand {
   padding-top: 4px;
   padding-bottom: 4px;
@@ -9977,7 +9971,7 @@ a .icon-flip-vertical:before {
 
 /* CUSTOMIZE THE LANGUAGE MENU
 -------------------------------------------------- */
-/* line 43, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 45, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu {
   position: fixed;
   z-index: 1031;
@@ -9986,11 +9980,11 @@ a .icon-flip-vertical:before {
   top: 0;
   border-top: 4px solid #95c11f;
 }
-/* line 50, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 52, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav {
   float: right;
 }
-/* line 53, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 55, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a {
   background-color: #95c11f;
   color: #fff;
@@ -10001,17 +9995,17 @@ a .icon-flip-vertical:before {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 62, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 64, ../../app/assets/stylesheets/theme/_navbar.scss */
 #locales-menu .nav > li > a:hover, #locales-menu .nav > li > a:focus {
   background-color: #b0de35;
   color: white;
 }
 
-/* line 69, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 71, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar.fixed #locales-menu {
   border-top-color: #000;
 }
-/* line 71, ../../app/assets/stylesheets/theme/_navbar.scss */
+/* line 73, ../../app/assets/stylesheets/theme/_navbar.scss */
 .navbar.fixed #locales-menu .nav > li > a {
   background-color: #000;
 }
@@ -10314,41 +10308,52 @@ body {
   overflow: hidden;
   height: auto;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: bottom center;
+  background-size: cover;
+  background-attachment: scroll;
   height: 100%;
+  min-height: 420px;
 }
-/* line 152, ../../app/assets/stylesheets/public.css.scss */
+/* line 155, ../../app/assets/stylesheets/public.css.scss */
 #header h2 {
   color: #95c11f;
   font-family: "flood-std", cursive;
 }
 
-/* line 158, ../../app/assets/stylesheets/public.css.scss */
+/* line 161, ../../app/assets/stylesheets/public.css.scss */
 .no-touch #header {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
+  background-attachment: none;
 }
 
-/* line 166, ../../app/assets/stylesheets/public.css.scss */
+/* line 171, ../../app/assets/stylesheets/public.css.scss */
 #intro {
   max-width: 80%;
 }
 
-/* line 170, ../../app/assets/stylesheets/public.css.scss */
+/* line 175, ../../app/assets/stylesheets/public.css.scss */
 #logo {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
+  /* line 175, ../../app/assets/stylesheets/public.css.scss */
+  #logo {
+    margin-bottom: 24px;
+  }
 }
 
 /* PAGE SECTIONS 
 -------------------------------------------------- */
-/* line 176, ../../app/assets/stylesheets/public.css.scss */
+/* line 184, ../../app/assets/stylesheets/public.css.scss */
 .section {
   position: relative;
 }
-/* line 178, ../../app/assets/stylesheets/public.css.scss */
+/* line 186, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret {
   width: 0;
   height: 0;
@@ -10363,7 +10368,7 @@ body {
   border-bottom: 0 dotted;
   content: "";
 }
-/* line 194, ../../app/assets/stylesheets/public.css.scss */
+/* line 202, ../../app/assets/stylesheets/public.css.scss */
 .section .section-caret.section-caret-top {
   top: auto;
   bottom: -22px;
@@ -10371,25 +10376,25 @@ body {
   border-bottom: 0 dotted;
 }
 
-/* line 205, ../../app/assets/stylesheets/public.css.scss */
+/* line 213, ../../app/assets/stylesheets/public.css.scss */
 .section-padding {
   padding-top: 66px;
   padding-bottom: 66px;
 }
 
-/* line 210, ../../app/assets/stylesheets/public.css.scss */
+/* line 218, ../../app/assets/stylesheets/public.css.scss */
 .page-header {
   margin-top: 0;
   margin-bottom: 44px;
   border: none;
 }
 
-/* line 215, ../../app/assets/stylesheets/public.css.scss */
+/* line 223, ../../app/assets/stylesheets/public.css.scss */
 .car-section-title .page-header {
   margin: 0;
 }
 
-/* line 218, ../../app/assets/stylesheets/public.css.scss */
+/* line 226, ../../app/assets/stylesheets/public.css.scss */
 .page-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -10398,7 +10403,7 @@ body {
   font-size: 24px;
 }
 
-/* line 226, ../../app/assets/stylesheets/public.css.scss */
+/* line 234, ../../app/assets/stylesheets/public.css.scss */
 .section-slogan {
   font-family: "flood-std", cursive;
   color: #000;
@@ -10408,34 +10413,34 @@ body {
   margin-bottom: 0;
 }
 
-/* line 234, ../../app/assets/stylesheets/public.css.scss */
+/* line 242, ../../app/assets/stylesheets/public.css.scss */
 .car-section {
   background-color: #91278d;
 }
-/* line 236, ../../app/assets/stylesheets/public.css.scss */
+/* line 244, ../../app/assets/stylesheets/public.css.scss */
 .car-section .section-caret {
   border-top-color: #91278d;
 }
-/* line 240, ../../app/assets/stylesheets/public.css.scss */
+/* line 248, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) {
   background-color: #ed1d24;
 }
-/* line 242, ../../app/assets/stylesheets/public.css.scss */
+/* line 250, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .section-caret {
   border-top-color: #ed1d24;
 }
-/* line 245, ../../app/assets/stylesheets/public.css.scss */
+/* line 253, ../../app/assets/stylesheets/public.css.scss */
 .car-section:nth-child(even) .section-caret-top {
   border-top-color: #fff;
 }
 
-/* line 251, ../../app/assets/stylesheets/public.css.scss */
+/* line 259, ../../app/assets/stylesheets/public.css.scss */
 .btn-link {
   color: #fff;
   text-decoration: underline;
   font-style: italic;
 }
-/* line 255, ../../app/assets/stylesheets/public.css.scss */
+/* line 263, ../../app/assets/stylesheets/public.css.scss */
 .btn-link:hover {
   color: #000;
   text-decoration: underline;
@@ -10443,14 +10448,14 @@ body {
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 262, ../../app/assets/stylesheets/public.css.scss */
+/* line 270, ../../app/assets/stylesheets/public.css.scss */
 .description-section {
   background-color: #95c11f;
 }
 
 /* STREETS SECTION
 -------------------------------------------------- */
-/* line 267, ../../app/assets/stylesheets/public.css.scss */
+/* line 275, ../../app/assets/stylesheets/public.css.scss */
 .streets-section {
   background-color: #5dc2a6;
   overflow: hidden;
@@ -10465,7 +10470,7 @@ body {
   -webkit-filter: grayscale(100%);
 }
 
-/* line 277, ../../app/assets/stylesheets/public.css.scss */
+/* line 285, ../../app/assets/stylesheets/public.css.scss */
 .no-touch .streets-section {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10476,23 +10481,23 @@ body {
 
 /* SERVICES SECTION
 -------------------------------------------------- */
-/* line 287, ../../app/assets/stylesheets/public.css.scss */
+/* line 295, ../../app/assets/stylesheets/public.css.scss */
 .services-section {
   background-color: #43a1ed;
 }
 
-/* line 290, ../../app/assets/stylesheets/public.css.scss */
+/* line 298, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail {
   text-align: center;
 }
-/* line 293, ../../app/assets/stylesheets/public.css.scss */
+/* line 301, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail .caption h4 {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-/* line 300, ../../app/assets/stylesheets/public.css.scss */
+/* line 308, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-icon {
   width: 108px;
   height: 108px;
@@ -10501,29 +10506,29 @@ body {
   background: #89c4f4 url(/assets/web_icons-0575dfa4612705577dc6d6d916f9c126.png) no-repeat left top;
 }
 
-/* line 307, ../../app/assets/stylesheets/public.css.scss */
+/* line 315, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(1) .thumbnail-icon {
   background-position: 4px 0;
 }
 
-/* line 312, ../../app/assets/stylesheets/public.css.scss */
+/* line 320, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(2) .thumbnail-icon {
   background-position: -78px 0;
 }
 
-/* line 317, ../../app/assets/stylesheets/public.css.scss */
+/* line 325, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(3) .thumbnail-icon {
   background-position: -164px 0;
 }
 
-/* line 322, ../../app/assets/stylesheets/public.css.scss */
+/* line 330, ../../app/assets/stylesheets/public.css.scss */
 .thumbnail-wrapper:nth-child(4) .thumbnail-icon {
   background-position: -250px 0;
 }
 
 /* CONDITIONS SECTION
 -------------------------------------------------- */
-/* line 329, ../../app/assets/stylesheets/public.css.scss */
+/* line 337, ../../app/assets/stylesheets/public.css.scss */
 .conditions-section {
   background-color: #5C5C5C;
 }
